@@ -8,9 +8,27 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10 px, 10px / 16px = 62.5%
   box-sizing: border-box;
 }
 
 body {
+  // If 'Open Sans' fails to load, load a sans-serif font.
+  font-family: "Open Sans", sans-serif;
+
+  // Default font weight
+  font-weight: 400;
+
+  // Default line height
+  line-height: 1.5;
+  // Default font size
+  font-size: 1.6rem;
+
+  // Default page background
+  background-image: linear-gradient(to right bottom, #ff3366, #ba265d);
+
+  // Ensure body takes full height of viewport
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
