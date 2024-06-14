@@ -1,0 +1,58 @@
+/*
+***** CSS Variables (Custom Properties) *****
+
+CSS variables, also known as custom properties, allow you to store values that you can reuse throughout your CSS. They are especially useful for maintaining consistency in your design and for making it easier to update styles across your entire site.
+
+---- Declaration and Usage ----
+CSS variables are declared using the -- prefix and are accessed using the var() function.
+
+Advantages of Custom Properties:
+
+1. No need for preprocessing:
+    CSS variables do not require a preprocessor and work natively in the browser.
+
+2. Can be used in JavaScript:
+    CSS variables can be dynamically read and modified using JavaScript, allowing for real-time updates.
+
+3. Inheritable:
+    CSS variables inherit their values, making it easier to manage styles across different elements.
+
+4. Responsive to media queries:
+    CSS variables can change values within media queries without the need to create new variables, unlike in SCSS.
+
+5. Natively supported by modern browsers:
+    CSS variables are supported by modern browsers, eliminating compatibility issues.
+
+***** The :root pseudo-class selector *****
+
+---- Why use the :root pseudo-class selector? ----
+
+The :root pseudo-class represents the highest-level parent of the document (i.e., the <html> element). Declaring your CSS variables in :root makes them globally accessible throughout your entire stylesheet. This is the best practice because it ensures the variables are available for use in any part of your CSS.
+
+In HTML, :root represents the <html> element and is identical to the selector html , except that its specificity is higher. This means that variables defined in :root can override those defined in the html selector, ensuring they are applied more consistently across your stylesheets.
+
+Using :root is a clearer indication of intent to future developers reading the code, signaling that the variables defined there are meant to be global.
+
+The CSS Custom Properties (CSS Variables) specification specifically recommends using :root for defining global variables. This establishes a best practice and consistency across projects and teams.
+*/
+:root {
+  /* **************** COLOURS **************** */
+
+  // ***** Primary colour and tints *****
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+
+  // ***** Grey colour and tints *****
+
+  // Light tints
+  --color-grey-light-1: #fefefe;
+  --color-grey-light-2: #f3f3f3;
+  --color-grey-light-3: #e5e5e5;
+  --color-grey-light-4: #ccc;
+
+  // Dark tints
+  --color-grey-dark-1: #999;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #333;
+}
