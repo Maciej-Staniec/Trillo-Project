@@ -71,3 +71,12 @@ body {
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
   min-height: 100vh;
 }
+
+.container,
+.main-content {
+  display: flex;
+}
+
+.header {
+  display: flex;
+}
