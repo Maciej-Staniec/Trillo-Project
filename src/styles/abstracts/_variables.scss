@@ -55,4 +55,7 @@ The CSS Custom Properties (CSS Variables) specification specifically recommends 
   --color-grey-dark-1: #999;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #333;
+
+  // Box shadows
+  --shadow-dark: 0 1rem 4rem 1rem rgba(0, 0, 0, 0.25);
 }

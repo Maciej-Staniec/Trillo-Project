@@ -47,6 +47,7 @@ The CSS Custom Properties (CSS Variables) specification specifically recommends 
   --color-grey-dark-1: #999;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #333;
+  --shadow-dark: 0 1rem 4rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 /* Global Resets */
@@ -77,6 +78,19 @@ body {
   display: flex;
 }
 
+.container {
+  justify-content: center;
+  align-items: center;
+  max-width: 120rem;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+  margin: 8rem auto;
+}
+
 .header {
+  display: flex;
+}
+
+.sidebar {
   display: flex;
 }
