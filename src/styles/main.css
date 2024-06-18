@@ -73,24 +73,29 @@ body {
   min-height: 100vh;
 }
 
-.container,
-.main-content {
-  display: flex;
-}
-
-.container {
-  justify-content: center;
-  align-items: center;
+.container-layout {
   max-width: 120rem;
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
   margin: 8rem auto;
 }
 
-.header {
+.main-content {
   display: flex;
+}
+
+.header {
+  height: 6.4rem;
+  display: flex;
+}
+
+.section {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 .sidebar {
   display: flex;
+  flex-direction: column;
 }

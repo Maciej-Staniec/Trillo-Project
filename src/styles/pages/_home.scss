@@ -1,13 +1,10 @@
-.container,
-.main-content {
-  display: flex;
-}
-
-.container {
-  justify-content: center;
-  align-items: center;
+.container-layout {
   max-width: 120rem;
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
   margin: 8rem auto;
+}
+
+.main-content {
+  display: flex;
 }
