@@ -1,4 +1,19 @@
 .sidebar {
   display: flex;
   flex-direction: column;
+  flex: 0 1 18%;
+  &-nav {
+    &__item {
+      list-style: none;
+    }
+    &__link {
+      text-decoration: none;
+    }
+
+    &__icon {
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+    }
+  }
 }
