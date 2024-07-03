@@ -86,7 +86,7 @@ body {
 
 .hotel-content {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1;
   /*
   flex: 1 breakdown
 
@@ -104,11 +104,8 @@ body {
 }
 
 .section {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
+  padding: 3.2rem;
 }
-
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -124,4 +121,17 @@ body {
   display: inline-block;
   height: 2rem;
   width: 2rem;
+}
+
+.gallery {
+  display: flex;
+  flex: 1;
+}
+.gallery__photo {
+  width: 100%;
+}
+
+.overview {
+  display: flex;
+  align-items: center;
 }

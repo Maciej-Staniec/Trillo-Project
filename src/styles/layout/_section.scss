@@ -1,6 +1,11 @@
 .section {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
-  
+  padding: 3.2rem;
+  &__details {
+  }
+
+  &__reviews {
+  }
+
+  &__booking {
+  }
 }
