@@ -22,3 +22,43 @@
   flex-basis: 0%: The initial size of the flex item before space is distributed according to flex-grow and flex-shrink. A 0 value means the item will start with zero width and grow based on the remaining space.
   */
 }
+
+.header {
+  height: 6.4rem;
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 18%;
+  &-nav {
+    &__item {
+      list-style: none;
+    }
+    &__link {
+      text-decoration: none;
+    }
+
+    &__icon {
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  &-legal {
+  }
+}
+
+.section {
+  padding: 3.2rem;
+  &__details {
+  }
+
+  &__reviews {
+  }
+
+  &__booking {
+  }
+}

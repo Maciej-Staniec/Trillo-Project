@@ -103,9 +103,6 @@ body {
   display: flex;
 }
 
-.section {
-  padding: 3.2rem;
-}
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -122,16 +119,6 @@ body {
   height: 2rem;
   width: 2rem;
 }
-
-.gallery {
-  display: flex;
-  flex: 1;
-}
-.gallery__photo {
-  width: 100%;
-}
-
-.overview {
-  display: flex;
-  align-items: center;
+.section {
+  padding: 3.2rem;
 }
