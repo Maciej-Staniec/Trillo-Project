@@ -73,29 +73,30 @@ body {
   min-height: 100vh;
 }
 
-.container-layout {
-  max-width: 120rem;
-  background-color: var(--color-grey-light-2);
-  box-shadow: var(--shadow-dark);
-  margin: 8rem auto;
-}
-
-.content {
-  display: flex;
-}
-
-.hotel-content {
+.gallery {
   display: flex;
   flex: 1;
-  /*
-  flex: 1 breakdown
+}
+.gallery__photo {
+  width: 100%;
+}
 
-  flex-grow: 1: The flex item can grow to take up any available space in the flex container. The 1 value means it will take up a proportion of the available space relative to other flex items with a flex-grow value.
+.overview {
+  display: flex;
+  align-items: center;
+}
+.hotel-info {
+  background-color: var(--color-grey-light-2);
+}
 
-  flex-shrink: 1: The flex item can shrink if necessary to fit into the container. The 1 value means it will shrink in proportion to other flex items with a flex-shrink value.
-
-  flex-basis: 0%: The initial size of the flex item before space is distributed according to flex-grow and flex-shrink. A 0 value means the item will start with zero width and grow based on the remaining space.
-  */
+.section {
+  padding: 3.2rem;
+}
+.container-layout {
+  max-width: 120rem;
+  background-color: #fff;
+  box-shadow: var(--shadow-dark);
+  margin: 8rem auto;
 }
 
 .header {
@@ -103,7 +104,12 @@ body {
   display: flex;
 }
 
+.content {
+  display: flex;
+}
+
 .sidebar {
+  background-color: var(--color-grey-dark-3);
   display: flex;
   flex-direction: column;
   flex: 0 1 18%;
@@ -113,9 +119,28 @@ body {
 }
 .sidebar-nav__link {
   text-decoration: none;
+  color: var(--color-grey-light-1);
 }
 .sidebar-nav__icon {
+  fill: currentColor;
   display: inline-block;
   height: 2rem;
   width: 2rem;
+}
+.sidebar-legal {
+  color: var(--color-grey-light-1);
+}
+
+.hotel-content {
+  display: flex;
+  flex: 1 0;
+  /*
+  flex: 1 breakdown
+
+  flex-grow: 1: The flex item can grow to take up any available space in the flex container. The 1 value means it will take up a proportion of the available space relative to other flex items with a flex-grow value.
+
+  flex-shrink: 1: The flex item can shrink if necessary to fit into the container. The 1 value means it will shrink in proportion to other flex items with a flex-shrink value.
+
+  flex-basis: 0%: The initial size of the flex item before space is distributed according to flex-grow and flex-shrink. A 0 value means the item will start with zero width and grow based on the remaining space.
+  */
 }

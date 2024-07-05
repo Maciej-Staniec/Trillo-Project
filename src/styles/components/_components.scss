@@ -12,9 +12,13 @@
 .overview {
   display: flex;
   align-items: center;
+
+  &__title {
+  }
 }
 
 .hotel-info {
+  background-color: var(--color-grey-light-2);
 }
 
 .section {

@@ -1,17 +1,50 @@
 .container-layout {
   max-width: 120rem;
-  background-color: var(--color-grey-light-2);
+  background-color: #fff;
   box-shadow: var(--shadow-dark);
   margin: 8rem auto;
+}
+
+.header {
+  height: 6.4rem;
+  display: flex;
 }
 
 .content {
   display: flex;
 }
 
+.sidebar {
+  background-color: var(--color-grey-dark-3);
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 18%;
+  &-nav {
+    &__item {
+      list-style: none;
+    }
+    &__link {
+      text-decoration: none;
+      color: var(--color-grey-light-1);
+    }
+
+    &__icon {
+      fill: currentColor;
+      // stroke: var(--color-grey-light-1);
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  &-legal {
+    color: var(--color-grey-light-1);
+  }
+}
+
 .hotel-content {
   display: flex;
-  flex: 1;
+  flex: 1 0;
   /*
   flex: 1 breakdown
 
@@ -22,33 +55,3 @@
   flex-basis: 0%: The initial size of the flex item before space is distributed according to flex-grow and flex-shrink. A 0 value means the item will start with zero width and grow based on the remaining space.
   */
 }
-
-.header {
-  height: 6.4rem;
-  display: flex;
-}
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  flex: 0 1 18%;
-  &-nav {
-    &__item {
-      list-style: none;
-    }
-    &__link {
-      text-decoration: none;
-    }
-
-    &__icon {
-      display: inline-block;
-      height: 2rem;
-      width: 2rem;
-    }
-  }
-
-  &-legal {
-  }
-}
-
-
