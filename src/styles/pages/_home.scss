@@ -43,25 +43,53 @@ Header styling
 .header {
   height: 6.4rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.logo {
+  height: 3rem;
 }
 
 .search {
+  @include flexbox-center;
   &__input {
-    color: var(--color-grey-dark-2);
+    color: inherit;
+  }
+
+  &__button {
+    color: white;
   }
 
   &__icon {
-    width: 1rem;
-    height: 1rem;
-    color: currentColor;
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: var(--color-grey-dark-1);
   }
 }
 
 .user-nav {
   display: flex;
+  gap: 3.2rem;
   &__icon {
     height: 2rem;
     width: 2rem;
+
+    &-box {
+      @include flexbox-center;
+    }
+  }
+
+  &__user {
+    display: flex;
+    @include flexbox-center;
+    &-photo {
+      height: 3.6rem;
+      width: 3.6rem;
+    }
+    &-name {
+    }
   }
 }
 
