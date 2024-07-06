@@ -54,17 +54,25 @@ Header styling
 
 .search {
   @include flexbox-center;
+  background-color: var(--color-grey-light-2);
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+
   &__input {
     color: inherit;
+    
   }
 
   &__button {
-    color: white;
+    background-color: var(--color-grey-light-2);
+    width: 1.6rem;
+    border-style: none;
+    @include flexbox-center;
   }
 
   &__icon {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 1.2rem;
+    height: 1.2rem;
     fill: var(--color-grey-dark-1);
   }
 }
@@ -72,22 +80,28 @@ Header styling
 .user-nav {
   display: flex;
   gap: 3.2rem;
+
+  &__icon-container {
+    // Centering the content of the icon box
+    @include flexbox-center;
+  }
+
   &__icon {
     height: 2rem;
     width: 2rem;
-
-    &-box {
-      @include flexbox-center;
-    }
+    fill: var(--color-grey-dark-2);
   }
 
-  &__user {
+  &__profile {
     display: flex;
+    // Centering the content of the icon box
     @include flexbox-center;
+    // Styling of the user profile photo
     &-photo {
       height: 3.6rem;
       width: 3.6rem;
     }
+    // Styling of the user name
     &-name {
     }
   }

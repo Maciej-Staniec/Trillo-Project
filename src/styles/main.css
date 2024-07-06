@@ -69,6 +69,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 1.6rem;
+  color: var(--color-grey-dark-2);
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
   min-height: 100vh;
 }
@@ -162,16 +163,24 @@ Header styling
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-grey-light-2);
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
 }
 .search__input {
   color: inherit;
 }
 .search__button {
-  color: white;
+  background-color: var(--color-grey-light-2);
+  width: 1.6rem;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .search__icon {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
   fill: var(--color-grey-dark-1);
 }
 
@@ -179,22 +188,23 @@ Header styling
   display: flex;
   gap: 3.2rem;
 }
+.user-nav__icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .user-nav__icon {
   height: 2rem;
   width: 2rem;
+  fill: var(--color-grey-dark-2);
 }
-.user-nav__icon-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.user-nav__user {
+.user-nav__profile {
   display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.user-nav__user-photo {
+.user-nav__profile-photo {
   height: 3.6rem;
   width: 3.6rem;
 }
