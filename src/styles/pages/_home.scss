@@ -1,51 +1,24 @@
-.container-layout {
-  max-width: 120rem;
-  background-color: #fff;
-  box-shadow: var(--shadow-dark);
-  margin: 8rem auto;
-}
-
-.header {
-  height: 6.4rem;
-  display: flex;
-}
-
-.content {
-  display: flex;
-}
-
-.sidebar {
-  background-color: var(--color-grey-dark-3);
-  display: flex;
-  flex-direction: column;
-  flex: 0 1 18%;
-  &-nav {
-    &__item {
-      list-style: none;
-    }
-    &__link {
-      text-decoration: none;
-      color: var(--color-grey-light-1);
-    }
-
-    &__icon {
-      fill: currentColor;
-      // stroke: var(--color-grey-light-1);
-      display: inline-block;
-      height: 2rem;
-      width: 2rem;
-    }
+/* 
+***********************************************
+Layout stylings
+*********************************************** 
+*/
+.layout {
+  &__main {
+    max-width: 120rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-dark);
+    margin: 8rem auto;
   }
 
-  &-legal {
-    color: var(--color-grey-light-1);
+  &__nav-hotel {
+    display: flex;
   }
-}
 
-.hotel-content {
-  display: flex;
-  flex: 1 0;
-  /*
+  &__hotel {
+    // display: flex;
+    flex: 1 0;
+    /*
   flex: 1 breakdown
 
   flex-grow: 1: The flex item can grow to take up any available space in the flex container. The 1 value means it will take up a proportion of the available space relative to other flex items with a flex-grow value.
@@ -54,4 +27,72 @@
 
   flex-basis: 0%: The initial size of the flex item before space is distributed according to flex-grow and flex-shrink. A 0 value means the item will start with zero width and grow based on the remaining space.
   */
+  }
+
+  &__hotel-review {
+    display: flex;
+    background-color: var(--color-grey-light-2);
+  }
+}
+
+/* 
+***********************************************
+Header styling
+*********************************************** 
+*/
+.header {
+  height: 6.4rem;
+  display: flex;
+}
+
+.search {
+  &__input {
+    color: var(--color-grey-dark-2);
+  }
+
+  &__icon {
+    width: 1rem;
+    height: 1rem;
+    color: currentColor;
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+/* 
+***********************************************
+Sidebar styling
+*********************************************** 
+*/
+
+.sidebar {
+  background-color: var(--color-grey-dark-3);
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 18%;
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--color-grey-light-1);
+  }
+
+  &__icon {
+    fill: currentColor;
+    // stroke: var(--color-grey-light-1);
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+  &__footer {
+    color: var(--color-grey-light-1);
+  }
 }

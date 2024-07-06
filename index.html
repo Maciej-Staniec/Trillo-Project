@@ -13,42 +13,74 @@
     <title>trillo &mdash; Your all-in-one booking app</title>
   </head>
   <body>
-    <!-- Flex layout container -->
-    <div class="container-layout">
+    <!-- Main layout container -->
+    <div class="layout__main">
       <!-- Header -->
-      <header class="header">header</header>
-      <div class="content">
+      <header class="header">
+        <img src="img/logo.png" alt="logo" />
+        <form action="#" class="search">
+          <input
+            type="text"
+            name="search__input"
+            id="search__input"
+            class="search__input" />
+          <button type="submit" class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="img/solid.svg#magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+        <nav class="user-nav">
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/solid.svg#bookmark"></use>
+            </svg>
+            <span class="user-nav__notification">7</span>
+          </div>
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/solid.svg#comments"></use>
+            </svg>
+            <span class="user-nav__notification">1</span>
+          </div>
+          <div class="user-nav__user">
+            
+          </div>
+        </nav>
+      </header>
+      <!-- Sidebar and Hotel Content  -->
+      <div class="layout__nav-hotel">
         <!-- Navigation Menu -->
-        <div class="sidebar">
-          <nav class="sidebar-nav">
-            <ul class="sidebar-nav__list">
-              <li class="sidebar-nav__item">
-                <a href="#" class="sidebar-nav__link">
-                  <svg class="sidebar-nav__icon">
+        <aside class="sidebar">
+          <nav class="sidebar__nav">
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <svg class="sidebar__icon">
                     <use xlink:href="img/solid.svg#house"></use>
                   </svg>
                   <span>Hotel</span>
                 </a>
               </li>
-              <li class="sidebar-nav__item">
-                <a href="#" class="sidebar-nav__link">
-                  <svg class="sidebar-nav__icon">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <svg class="sidebar__icon">
                     <use xlink:href="img/solid.svg#plane-departure"></use>
                   </svg>
                   <span>Flight</span>
                 </a>
               </li>
-              <li class="sidebar-nav__item">
-                <a href="#" class="sidebar-nav__link">
-                  <svg class="sidebar-nav__icon">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <svg class="sidebar__icon">
                     <use xlink:href="img/solid.svg#key"></use>
                   </svg>
                   <span>Car Rental</span>
                 </a>
               </li>
-              <li class="sidebar-nav__item">
-                <a href="#" class="sidebar-nav__link">
-                  <svg class="sidebar-nav__icon">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <svg class="sidebar__icon">
                     <use xlink:href="img/solid.svg#signs-post"></use>
                   </svg>
                   <span>Tours</span>
@@ -56,15 +88,15 @@
               </li>
             </ul>
           </nav>
-
-          <div class="sidebar-legal">
+          <!-- Footer -->
+          <footer class="sidebar__footer">
             <p>&copy; 2024 by Maciej Staniec. All rights reserved.</p>
-          </div>
-        </div>
+          </footer>
+        </aside>
         <!-- Hotel Content -->
-        <main class="hotel-content">
+        <main class="layout__hotel">
           <!-- Gallery component -->
-          <div class="gallery">
+          <section class="gallery">
             <figure class="gallery__item">
               <img
                 src="img/hotel-1.jpg"
@@ -83,21 +115,21 @@
                 alt="Photo of hotel 3"
                 class="gallery__photo" />
             </figure>
-          </div>
-          <div class="overview">
+          </section>
+          <section class="overview">
             <h1 class="overview__title">Hotel Las Palmas</h1>
-          </div>
-
-          <div class="hotel-info">
-            <!-- Hotel Information Section -->
-            <section class="section section__details">Hotel details</section>
+          </section>
+          <!-- Hotel Details and Reviews container -->
+          <div class="layout__hotel-review">
+            <!-- Hotel Details section -->
+            <section class="details">Hotel details</section>
 
             <!-- Reviews Section -->
-            <section class="section section__reviews">Reviews</section>
+            <section class="reviews">Reviews</section>
           </div>
 
           <!-- Call to Action (CTA) Section -->
-          <section class="section section__booking">CTA</section>
+          <section class="cta">CTA</section>
         </main>
       </div>
     </div>
