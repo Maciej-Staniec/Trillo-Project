@@ -157,18 +157,30 @@ Header styling
 
 .logo {
   height: 3rem;
+  transition: all 0.2s;
+}
+.logo:hover {
+  transform: scale(1.2);
 }
 
 .search {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-grey-light-2);
-  padding: 0.8rem 1.6rem;
-  border-radius: 50px;
+  flex: 0 0 40%;
 }
 .search__input {
   color: inherit;
+  background-color: var(--color-grey-light-2);
+  border-style: none;
+  width: 90%;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  transition: all 0.2s;
+}
+.search__input:focus {
+  outline: none;
+  width: 100%;
 }
 .search__button {
   background-color: var(--color-grey-light-2);
@@ -177,26 +189,44 @@ Header styling
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: -3rem;
 }
 .search__icon {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   fill: var(--color-grey-dark-1);
 }
 
 .user-nav {
   display: flex;
-  gap: 3.2rem;
+  height: 100%;
 }
 .user-nav__icon-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 6.4rem;
 }
 .user-nav__icon {
-  height: 2rem;
-  width: 2rem;
+  height: 2.2rem;
+  width: 2.2rem;
   fill: var(--color-grey-dark-2);
+}
+.user-nav__notification {
+  position: absolute;
+  right: 20%;
+  top: 25%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: #fff;
+  font-size: 1rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
 }
 .user-nav__profile {
   display: flex;
