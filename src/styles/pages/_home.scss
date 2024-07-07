@@ -50,9 +50,26 @@ Header styling
 
 .logo {
   height: 3rem;
-  transition: all 0.2s;
   &:hover {
+    animation: enlarge-and-shrink 0.7s;
+  }
+}
+
+@keyframes enlarge-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+
+  33% {
     transform: scale(1.2);
+  }
+
+  66% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
