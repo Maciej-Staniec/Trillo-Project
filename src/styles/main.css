@@ -42,7 +42,7 @@ The CSS Custom Properties (CSS Variables) specification specifically recommends 
   --color-primary-dark: #ba265d;
   --color-grey-light-1: #fefefe;
   --color-grey-light-2: #f3f3f3;
-  --color-grey-light-3: #e5e5e5;
+  --color-grey-light-3: #ebebeb;
   --color-grey-light-4: #ccc;
   --color-grey-light-5: #b8b8b8;
   --color-grey-dark-1: #999;
@@ -200,17 +200,22 @@ Header styling
   outline: none;
   width: 100%;
 }
+.search__input::-moz-placeholder {
+  font-weight: 100;
+  color: var(--color-grey-light-4);
+}
+.search__input::placeholder {
+  font-weight: 100;
+  color: var(--color-grey-light-4);
+}
 .search__button {
-  background-color: var(--color-grey-light-2);
+  background-color: transparent;
   width: 1.6rem;
   border-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: -3rem;
-}
-.search__button:focus {
-  fill: var(--color-grey-light-3);
 }
 .search__icon {
   width: 1.6rem;
