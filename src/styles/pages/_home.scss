@@ -41,71 +41,77 @@ Header styling
 *********************************************** 
 */
 .header {
-  height: 8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--color-grey-light-3);
+  height: 8rem; // Sets a fixed height of 8rem for the header.
+  display: flex; // Enables flexbox layout to align child elements horizontally.
+  justify-content: space-between; // Distributes space between child elements.
+  align-items: center; // Vertically aligns child elements in the center.
+  border-bottom: 1px solid var(--color-grey-light-3); // Adds a light grey border at the bottom.
 }
 
+// Styling for the logo within the header.
 .logo {
   height: 3.6rem;
-  margin-left: 2.4rem;
+  margin-left: 2.4rem; // Adds a left margin to space out the logo from the content.
   &:hover {
-    animation: enlarge-and-shrink 0.7s;
-    cursor: pointer;
+    // Defines hover state styles for the logo.
+    animation: enlarge-and-shrink 0.7s; // Applies a scaling animation on hover.
+    cursor: pointer; // Changes the cursor to indicate clickable item.
   }
 }
 
+// Defines the keyframe animation for the logo on hover.
 @keyframes enlarge-and-shrink {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  80% {
-    transform: scale(0.9);
-  }
-
+  0%,
   100% {
-    transform: scale(1);
+    transform: scale(1); // Logo starts and ends at its original scale.
+  }
+  50% {
+    transform: scale(
+      1.2
+    ); // Logo scales up to 1.2 times its size midway through the animation.
+  }
+  80% {
+    transform: scale(
+      0.9
+    ); // Logo scales down to 0.9 times its size before finishing.
   }
 }
 
+// Styling for the search input and button container.
 .search {
-  @include flexbox-center;
-  flex: 0 0 40%;
+  @include flexbox-center; // Centers children flex items.
+  flex: 0 0 40%; // Flex basis of 40% with no growth or shrink.
 
   &__input {
     font-family: inherit;
     color: inherit;
     background-color: var(--color-grey-light-2);
-    border-style: none;
-    width: 90%;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    transition: all 0.2s;
+    border-style: none; // No border for the input.
+    width: 90%; // Input width is 90% of its container.
+    padding: 1rem 2rem; // Padding around the text inside the input box.
+    border-radius: 50px; // Rounded corners with a radius of 50px.
+    transition: all 0.2s; // Smooth transition for all properties over 0.2 seconds.
     &:focus {
-      background-color: var(--color-grey-light-3);
-      outline: none;
-      width: 100%;
+      // Styles when the input is focused.
+      background-color: var(
+        --color-grey-light-3
+      ); // Darker grey background on focus.
+      outline: none; // Removes the outline to clean up the focus state.
+      width: 100%; // Expands to full width when focused.
     }
-
     &::placeholder {
+      // Styling for the placeholder text.
       font-weight: 100;
       color: var(--color-grey-light-4);
     }
   }
 
   &__button {
-    background-color: transparent;
-    width: 1.6rem;
-    border-style: none;
-    @include flexbox-center;
-    margin-left: -3rem;
+    background-color: transparent; // Transparent background for the button.
+    width: 1.6rem; // Fixed width for the button.
+    border-style: none; // No border for the button.
+    @include flexbox-center; // Center alignment for the icon inside the button.
+    margin-left: -3rem; // Negative margin to overlap with the input.
   }
 
   &__icon {
@@ -115,60 +121,68 @@ Header styling
   }
 }
 
+// Styling for the user navigation area.
 .user-nav {
-  display: flex;
-  height: 100%;
+  display: flex; // Enables flexbox layout.
+  height: 100%; // Full height of the parent container for all elements.
 
   &__icon-container {
-    // Centering the content of the icon box
-    @include flexbox-center;
-    position: relative;
-    width: 6.4rem;
-    transition: all 0.2s;
-    cursor: pointer;
+    @include flexbox-center; // Centers the icon horizontally and vertically.
+    position: relative; // Position relative for absolute positioning of child elements.
+    width: 6.4rem; // Fixed width for the icon container.
+    transition: all 0.2s; // Smooth transition for all properties over 0.2 seconds.
+    cursor: pointer; // Changes the cursor to indicate clickable item.
     &:hover,
     &:active {
-      background-color: var(--color-grey-light-2);
+      // Hover and active state styles.
+      background-color: var(
+        --color-grey-light-2
+      ); // Light grey background on hover/active.
     }
   }
 
   &__icon {
-    height: 2.2rem;
-    width: 2.2rem;
-    fill: var(--color-grey-dark-2);
+    height: 2.2rem; // Fixed height for the icon.
+    width: 2.2rem; // Fixed width for the icon.
+    fill: var(--color-grey-dark-2); // Slightly darker grey color for the icon.
   }
 
+  // Notification badge styling within the icon container.
   &__notification {
-    position: absolute;
-    right: 20%;
-    top: 25%;
-    display: flex;
-    @include flexbox-center;
-    background-color: red;
+    position: absolute; // Absolutely positioned within the icon container.
+    right: 20%; // Positioned 20% from the right edge.
+    top: 25%; // Positioned 25% from the top.
+    display: flex; // flex layout to center content.
+    @include flexbox-center; // Centers content inside the notification badge.
+    background-color: var(
+      --color-primary
+    ); // primary color for high visibility.
     color: #fff;
     font-size: 1rem;
-
-    width: 1.7rem;
-    height: 1.7rem;
-    border-radius: 50%;
+    width: 1.7rem; // Diameter of the circular badge.
+    height: 1.7rem; // Height matches the width to create a circle.
+    border-radius: 50%; // Fully rounded corners to form a circle.
   }
 
+  // Styling for the user profile section.
   &__profile {
-    display: flex;
-    padding: 0 2.4rem;
-    gap: 1.2rem;
-    // Centering the content of the icon box
-    @include flexbox-center;
+    display: flex; // Flex layout to align items.
+    padding: 0 2.4rem; // Padding on both sides.
+    gap: 1.2rem; // Space between child elements.
+    @include flexbox-center; // Center alignment for children.
     &:hover,
     &:active {
-      background-color: var(--color-grey-light-2);
-      cursor: pointer;
+      // Hover and active state styles.
+      background-color: var(
+        --color-grey-light-2
+      ); // Light grey background on hover/active.
+      cursor: pointer; // Changes the cursor to indicate clickable item.
     }
-    // Styling of the user profile photo
     &-photo {
-      height: 4rem;
-      width: 4rem;
-      border-radius: 100px;
+      // User profile photo styling.
+      height: 4rem; // Fixed height for the photo.
+      width: 4rem; // Fixed width, maintaining aspect ratio.
+      border-radius: 100px; // Highly rounded corners for a softened edge.
     }
   }
 }
@@ -183,14 +197,21 @@ Sidebar styling
   background-color: var(--color-grey-dark-3);
   display: flex;
   flex-direction: column;
-  flex: 0 1 18%;
+  justify-content: space-between;
+
+  &__nav {
+    margin-top: 3.2rem;
+  }
+
   &__item {
     list-style: none;
   }
 
   &__link {
+    display: flex;
     text-decoration: none;
     color: var(--color-grey-light-1);
+    padding: 1.2rem;
   }
 
   &__icon {
