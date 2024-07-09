@@ -195,12 +195,12 @@ Sidebar styling
 
 .sidebar {
   background-color: var(--color-grey-dark-3);
-  display: flex;
+  flex: 0 0 19.5rem;
   flex-direction: column;
   justify-content: space-between;
 
   &__nav {
-    margin-top: 3.2rem;
+    margin-top: 2.4rem;
   }
 
   &__item {
@@ -211,16 +211,23 @@ Sidebar styling
     display: flex;
     text-decoration: none;
     color: var(--color-grey-light-1);
-    padding: 1.2rem;
+    padding: 1.6rem 3.2rem;
   }
 
   &__icon {
     fill: currentColor;
     // stroke: var(--color-grey-light-1);
     display: inline-block;
-    height: 2rem;
-    width: 2rem;
+    height: 1.6rem;
+    width: 1.6rem;
   }
+
+  &__text {
+    margin-left: 2.4rem;
+    text-transform: uppercase;
+    // font-weight: 200;
+  }
+
   &__footer {
     color: var(--color-grey-light-1);
   }

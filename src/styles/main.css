@@ -281,12 +281,12 @@ Sidebar styling
 */
 .sidebar {
   background-color: var(--color-grey-dark-3);
-  display: flex;
+  flex: 0 0 19.5rem;
   flex-direction: column;
   justify-content: space-between;
 }
 .sidebar__nav {
-  margin-top: 3.2rem;
+  margin-top: 2.4rem;
 }
 .sidebar__item {
   list-style: none;
@@ -295,13 +295,17 @@ Sidebar styling
   display: flex;
   text-decoration: none;
   color: var(--color-grey-light-1);
-  padding: 1.2rem;
+  padding: 1.6rem 3.2rem;
 }
 .sidebar__icon {
   fill: currentColor;
   display: inline-block;
-  height: 2rem;
-  width: 2rem;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.sidebar__text {
+  margin-left: 2.4rem;
+  text-transform: uppercase;
 }
 .sidebar__footer {
   color: var(--color-grey-light-1);
