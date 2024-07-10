@@ -24,8 +24,16 @@ Overview styling
 .overview {
   display: flex;
   align-items: center;
-
+  justify-content: space-around;
   &__title {
+    font-weight: 400;
+  }
+
+  &__stars {
+    &-item {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
 

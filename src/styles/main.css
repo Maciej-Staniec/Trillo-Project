@@ -96,7 +96,16 @@ Overview styling
 .overview {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
+.overview__title {
+  font-weight: 400;
+}
+.overview__stars-item {
+  width: 2rem;
+  height: 2rem;
+}
+
 /* 
 ***********************************************
 Details styling
@@ -312,6 +321,10 @@ Sidebar styling
   text-decoration: none;
   color: var(--color-grey-light-1);
   padding: 1.6rem 3.2rem;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+  gap: 2.4rem;
 }
 .sidebar__icon {
   fill: currentColor;
@@ -320,7 +333,6 @@ Sidebar styling
   width: 1.6rem;
 }
 .sidebar__text {
-  margin-left: 2.4rem;
   text-transform: uppercase;
 }
 .sidebar__footer {

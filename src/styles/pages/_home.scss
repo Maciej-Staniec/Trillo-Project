@@ -3,18 +3,24 @@
 Layout stylings
 *********************************************** 
 */
+// Base layout container styles
 .layout {
+  // Main content styling
   &__main {
-    max-width: 120rem;
+    max-width: 120rem; // Sets a maximum width to ensure content does not stretch too wide on larger screens.
     background-color: #fff;
-    box-shadow: var(--shadow-dark);
-    margin: 8rem auto;
+    box-shadow: var(
+      --shadow-dark
+    ); // Applies a dark shadow for 3D effect, enhancing the layer's visual separation from the background.
+    margin: 8rem auto; // Centers the main content horizontally and gives it vertical spacing from the top of the web browser display window.
   }
 
+  // Container spanning the sidebar and the hotel content (excluding the header)
   &__nav-hotel {
-    display: flex;
+    display: flex; // Uses flexbox ensuring a flexible and adaptive layout.
   }
 
+  // Main container for hotel content
   &__hotel {
     // display: flex;
     flex: 1 0;
@@ -29,9 +35,12 @@ Layout stylings
   */
   }
 
+  // Container for hotel reviews
   &__hotel-review {
-    display: flex;
-    background-color: var(--color-grey-light-2);
+    display: flex; // Also uses flexbox to provide a consistent, aligned structure for reviews.
+    background-color: var(
+      --color-grey-light-2
+    ); // Sets a light grey background to differentiate the review section from other content areas.
   }
 }
 
@@ -195,63 +204,72 @@ Sidebar styling
 
 .sidebar {
   background-color: var(--color-grey-dark-3);
-  flex: 0 0 18%;
-  flex-direction: column;
-  justify-content: space-between;
+  flex: 0 0 18%; // The sidebar is non-flexible, with a fixed width of 18% of its container.
+  flex-direction: column; // Stacks child elements vertically.
+  justify-content: space-between; // Spaces child elements vertically from top to bottom.
 
+  // Styles for the navigation container within the sidebar.
   &__nav {
-    margin-top: 2.4rem;
+    margin-top: 2.4rem; // Adds top margin to space the nav from any elements above it.
   }
 
+  // Styles for individual navigation items within the sidebar.
   &__item {
-    list-style: none;
-    position: relative;
+    list-style: none; // Removes default list styling.
+    position: relative; // Positioned relative for absolutely positioned pseudo-elements.
 
+    // Pseudo-element for decorative purposes before each nav item.
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+      content: ""; // Necessary for the pseudo-element to display.
+      position: absolute; // Positioned relative to the parent item.
+      top: 0; // Aligns to the top of the parent item.
+      left: 0; // Aligns to the left of the parent item.
       background-color: var(--color-primary);
-      width: 3px;
-      height: 100%;
-      transform: scaleY(0);
+      width: 3px; // Initial thin line style of the decoration on animation.
+      height: 100%; // Full height of the parent item.
+      transform: scaleY(0); // Initially scaled to 0, invisible vertically.
       transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
-        background-color 0.1s;
+        background-color 0.1s; // Animates transformations and color change.
     }
 
+    // Expands the before pseudo-element (decoration of the selected link) on hover to fill the item's width and becomes fully visible.
     &:hover::before {
-      width: 100%;
-      transform: scaleY(1);
+      width: 100%; // Expands to the full width of the parent item.
+      transform: scaleY(1); // Scales back to full visibility.
     }
   }
 
+  // Styling links within the sidebar for both unvisited and visited states.
   &__link:link,
   &__link:visited {
-    display: flex;
-    text-decoration: none;
+    display: flex; // Displays content in a flex row.
+    text-decoration: none; // No underlines on the link.
     color: var(--color-grey-light-1);
-    padding: 1.6rem 3.2rem;
+    padding: 1.6rem 3.2rem; // Padding around the text for better clickability.
+    position: relative; // Positioned relative for stacking context.
+    z-index: 10; // Ensures it's on top of the animated highlight (::before element of the __item)
+    align-items: center; // Centers items vertically within the link.
+    gap: 2.4rem; // Spaces the text from the icon.
   }
 
+  // Icon style within the link.
   &__icon {
-    fill: currentColor;
-    // stroke: var(--color-grey-light-1);
-    display: inline-block;
-    height: 1.6rem;
-    width: 1.6rem;
+    fill: currentColor; // Inherits the text color for the icon.
+    display: inline-block; // Allows width and height to affect the element.
+    height: 1.6rem; // Fixed height for the icon.
+    width: 1.6rem; // Fixed width for the icon.
   }
 
+  // Styling for the text within each link, making it uppercase for visual distinction.
   &__text {
-    margin-left: 2.4rem;
-    text-transform: uppercase;
-    // font-weight: 200;
+    text-transform: uppercase; // Enhances visibility and style.
   }
 
+  // Styles for the sidebar footer
   &__footer {
-    color: var(--color-grey-light-1);
-    padding: 3.2rem;
-    font-size: 1.2rem;
-    text-align: center;
+    color: var(--color-grey-light-1); // Light grey color for footer text.
+    padding: 3.2rem; // Padding around the footer text for spacing.
+    font-size: 1.2rem; // Smaller font size for less emphasis.
+    text-align: center; // Centers text horizontally within the footer.
   }
 }
