@@ -281,7 +281,7 @@ Sidebar styling
 */
 .sidebar {
   background-color: var(--color-grey-dark-3);
-  flex: 0 0 19.5rem;
+  flex: 0 0 18%;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -290,8 +290,24 @@ Sidebar styling
 }
 .sidebar__item {
   list-style: none;
+  position: relative;
 }
-.sidebar__link {
+.sidebar__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  width: 3px;
+  height: 100%;
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+}
+.sidebar__item:hover::before {
+  width: 100%;
+  transform: scaleY(1);
+}
+.sidebar__link:link, .sidebar__link:visited {
   display: flex;
   text-decoration: none;
   color: var(--color-grey-light-1);
@@ -309,4 +325,7 @@ Sidebar styling
 }
 .sidebar__footer {
   color: var(--color-grey-light-1);
+  padding: 3.2rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
