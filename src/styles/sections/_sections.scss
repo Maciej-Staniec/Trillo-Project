@@ -6,13 +6,12 @@ Gallery styling
 
 .gallery {
   display: flex;
-  flex: 1;
-
   &__item {
   }
 
   &__photo {
     width: 100%;
+    display: block;
   }
 }
 
@@ -35,11 +34,6 @@ Overview styling
       @include flexbox-center;
       gap: 2.4rem;
     }
-  }
-
-  &__name {
-    font-weight: 200;
-    text-transform: uppercase;
   }
 
   &__stars {
