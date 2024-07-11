@@ -96,14 +96,63 @@ Overview styling
 .overview {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-.overview__title {
-  font-weight: 400;
+.overview__container-left {
+  margin-left: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+.overview__container-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+.overview__name {
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.overview__stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
 }
 .overview__stars-item {
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--color-primary);
+}
+.overview__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+.overview__location-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--color-primary);
+}
+.overview__score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-primary);
+  padding: 1.2rem 1.6rem;
+}
+.overview__score-average {
+  color: var(--color-grey-light-1);
+  font-size: 2.4rem;
+}
+.overview__score-votes {
+  color: var(--color-grey-light-1);
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 /* 
