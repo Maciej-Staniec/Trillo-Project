@@ -57,6 +57,22 @@ Overview styling
     }
 
     &-text {
+      font-size: 1.2rem;
+      color: var(--color-primary);
+      background-color: transparent;
+      border: none;
+      position: relative;
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 1.7rem;
+        left: 50%;
+        background-color: currentColor;
+        height: 1px;
+        width: 120%;
+        transform: translateX(-50%);
+      }
     }
   }
 
