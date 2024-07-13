@@ -41,6 +41,8 @@ Layout stylings
     background-color: var(
       --color-grey-light-2
     ); // Sets a light grey background to differentiate the review section from other content areas.
+    justify-content: space-around;
+    padding: 3.2rem;
   }
 }
 
