@@ -61,6 +61,7 @@ Overview styling
       border: none;
       position: relative;
       cursor: pointer;
+      transition: all 0.2s;
       &::after {
         content: "";
         position: absolute;
@@ -71,9 +72,11 @@ Overview styling
         width: 120%;
         transform: translateX(-50%);
       }
+      &:hover {
+        color: var(--color-grey-dark-3);
+      }
     }
   }
-
   &__score {
     @include flexbox-center;
     flex-direction: column;
@@ -133,13 +136,14 @@ Details styling
   }
   &__recommendations {
     display: flex;
-    &-avatar {
-      display: flex;
-    }
+    justify-content: space-between;
     &-photo {
       height: 4rem;
       width: 4rem;
       border-radius: 100px;
+      &:not(:last-child) {
+        margin-right: -2rem;
+      }
     }
   }
 }
