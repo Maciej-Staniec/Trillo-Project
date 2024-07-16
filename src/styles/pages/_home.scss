@@ -208,6 +208,7 @@ Sidebar styling
   background-color: var(--color-grey-dark-3);
   flex: 0 0 18%; // The sidebar is non-flexible, with a fixed width of 18% of its container.
   flex-direction: column; // Stacks child elements vertically.
+  display: flex;
   justify-content: space-between; // Spaces child elements vertically from top to bottom.
 
   // Styles for the navigation container within the sidebar.
