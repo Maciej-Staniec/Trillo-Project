@@ -4,3 +4,13 @@
   justify-content: center;
   align-items: center;
 }
+
+// Details section spacing
+@mixin details-padding {
+  padding: 2.4rem;
+}
+
+// Details section flex gap
+@mixin details-gap {
+  gap: 3.2rem;
+}

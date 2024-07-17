@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 ***** CSS Variables (Custom Properties) *****
 
@@ -79,6 +80,12 @@ body {
   font-size: 2.4rem;
   font-weight: 300;
   letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -182,35 +189,37 @@ Overview styling
 
 /* 
 ***********************************************
-Details styling
+Hotel details section stylings
 *********************************************** 
 */
-.details {
+.features {
   flex: 0 0 60%;
   background-color: #fff;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  padding: 3.2rem;
-  gap: 2.4rem;
+  padding: 2.4rem;
+  gap: 3.2rem;
 }
-.details__description {
+
+.feature__description {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
-.details__description-text {
+.feature__description-text {
   text-align: justify;
 }
-.details__features {
+.feature__list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
-.details__features-item {
+.feature__item {
   flex: 0 0 50%;
   position: relative;
 }
-.details__features-item::before {
+.feature__item::before {
   content: "";
   margin-right: 0.8rem;
   height: 1rem;
@@ -222,25 +231,61 @@ Details styling
   -webkit-mask-size: cover;
           mask-size: cover;
 }
-.details__recommendations {
+.feature__recommendations {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.details__recommendations-photo {
+.feature__recommendations-photo {
   height: 4rem;
   width: 4rem;
   border-radius: 100px;
   border: 3px solid #fff;
 }
-.details__recommendations-photo:not(:last-child) {
+.feature__recommendations-photo:not(:last-child) {
   margin-right: -2rem;
 }
 
-/* 
-***********************************************
-Reviews styling
-*********************************************** 
-*/
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.review {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2.4rem;
+}
+.review::before {
+  content: "“";
+  font-size: 20rem;
+  font-family: sans-serif;
+  color: var(--color-grey-light-2);
+  position: absolute;
+  top: -28%;
+  left: -2%;
+}
+.review__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.review__footer {
+  display: flex;
+  justify-content: space-between;
+}
+.review__left-side {
+  display: flex;
+  gap: 1.2rem;
+}
+.review__photo {
+  height: 4rem;
+  border-radius: 100px;
+}
 /* 
 ***********************************************
 CTA styling
@@ -272,11 +317,12 @@ Layout stylings
   flex-basis: 0%: The initial size of the flex item before space is distributed according to flex-grow and flex-shrink. A 0 value means the item will start with zero width and grow based on the remaining space.
   */
 }
-.layout__hotel-review {
+.layout__hotel-details {
   display: flex;
   background-color: var(--color-grey-light-2);
   justify-content: space-around;
-  padding: 3.2rem;
+  padding: 2.4rem;
+  gap: 3.2rem;
 }
 
 /* 

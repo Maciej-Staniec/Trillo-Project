@@ -36,13 +36,14 @@ Layout stylings
   }
 
   // Container for hotel reviews
-  &__hotel-review {
+  &__hotel-details {
     display: flex; // Also uses flexbox to provide a consistent, aligned structure for reviews.
     background-color: var(
       --color-grey-light-2
     ); // Sets a light grey background to differentiate the review section from other content areas.
     justify-content: space-around;
-    padding: 3.2rem;
+    padding: 2.4rem;
+    gap: 3.2rem;
   }
 }
 
