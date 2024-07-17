@@ -209,6 +209,7 @@ Hotel details section stylings
 }
 .feature__description-text {
   text-align: justify;
+  line-height: 1.7;
 }
 .feature__list {
   list-style: none;
@@ -218,6 +219,7 @@ Hotel details section stylings
 .feature__item {
   flex: 0 0 50%;
   position: relative;
+  margin-bottom: 0.8rem;
 }
 .feature__item::before {
   content: "";

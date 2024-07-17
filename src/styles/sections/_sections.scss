@@ -119,6 +119,7 @@ Hotel details section stylings
     gap: 1.2rem;
     &-text {
       text-align: justify;
+      line-height: 1.7;
     }
   }
   &__list {
@@ -129,6 +130,7 @@ Hotel details section stylings
   &__item {
     flex: 0 0 50%;
     position: relative;
+    margin-bottom: 0.8rem;
     &::before {
       content: "";
       margin-right: 0.8rem;
