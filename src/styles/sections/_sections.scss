@@ -148,9 +148,7 @@ Hotel details section stylings
     justify-content: space-between;
     align-items: center;
     &-photo {
-      height: 4rem;
-      width: 4rem;
-      border-radius: 100px;
+      @include avatar-styling;
       border: 3px solid #fff;
       &:not(:last-child) {
         margin-right: -2rem;
@@ -164,6 +162,7 @@ Hotel details section stylings
   display: flex;
   flex-direction: column;
   @include details-gap;
+  // align-items: center;
 }
 
 .review {
@@ -179,17 +178,19 @@ Hotel details section stylings
     font-family: sans-serif;
     color: var(--color-grey-light-2);
     position: absolute;
-    top: -28%;
-    left: -2%;
+    top: -34%;
+    left: -1%;
   }
 
   &__header {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    position:relative;
   }
 
   &__text {
+    position:relative;
   }
 
   &__footer {
@@ -203,20 +204,24 @@ Hotel details section stylings
   }
 
   &__photo {
-    height: 4rem;
-    border-radius: 100px;
-  }
-
-  &__details {
+    @include avatar-styling;
   }
 
   &__name {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
   }
 
   &__date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-1);
   }
 
   &__rating {
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--color-primary);
   }
 }
 

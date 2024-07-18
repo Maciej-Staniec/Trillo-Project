@@ -1,0 +1,23 @@
+.btn-inline {
+  display: flex;
+  border: none;
+  font-size: inherit;
+  color: var(--color-primary);
+  background-color: transparent;
+  border-bottom: 1px solid;
+  align-self: center; // Prevent inheriting align-items from the parent container for styling purposes
+  padding-bottom: 2px;
+  transition: all 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: var(--color-dark-grey-3);
+  }
+  &:hover > span {
+    margin-left: 1rem;
+  }
+
+  span {
+    margin-left: 0.3rem;
+    transition: margin-left 0.2s;
+  }
+}

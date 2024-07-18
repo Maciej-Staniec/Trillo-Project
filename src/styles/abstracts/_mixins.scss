@@ -14,3 +14,9 @@
 @mixin details-gap {
   gap: 3.2rem;
 }
+
+@mixin avatar-styling {
+  height: 4rem; // Fixed height for the photo.
+  width: 4rem; // Fixed width, maintaining aspect ratio.
+  border-radius: 100px; // Highly rounded corners for a softened edge.
+}
