@@ -106,6 +106,12 @@ body {
   text-transform: uppercase;
 }
 
+.heading-secondary {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .heading-tertiary {
   font-size: 1.8rem;
   font-weight: 300;
@@ -336,6 +342,37 @@ Hotel details section stylings
 CTA styling
 *********************************************** 
 */
+.cta {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+.cta .btn {
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 300;
+  background-image: linear-gradient(to right, var(--color-primary-light) 0%, var(--color-primary) 33%, var(--color-primary-dark) 67%);
+  text-transform: uppercase;
+  color: #fff;
+  padding: 2.4rem 8rem;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.cta .btn-invisible {
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
+.cta .btn:hover .btn-visible {
+  transform: translateY(100%);
+}
+.cta .btn:hover .btn-invisible {
+  top: 0;
+}
+
 /* 
 ***********************************************
 Layout stylings
