@@ -13,6 +13,9 @@ Layout stylings
       --shadow-dark
     ); // Applies a dark shadow for 3D effect, enhancing the layer's visual separation from the background.
     margin: 8rem auto; // Centers the main content horizontally and gives it vertical spacing from the top of the web browser display window.
+    @include respond-to('1200'){
+      margin:0;
+    }
   }
 
   // Container spanning the sidebar and the hotel content (excluding the header)

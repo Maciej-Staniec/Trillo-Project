@@ -21,3 +21,36 @@
   border-radius: 100px; // Highly rounded corners for a softened edge.
 }
 
+// In SCSS, you can define breakpoints using a map, which allows you to store key-value pairs. Each key represents a breakpoint name, and each value represents the corresponding pixel value for that breakpoint.
+//Benefits of Using a Map for Breakpoints
+// Centralized Management: All breakpoint values are defined in one place, making it easy to manage and update them.
+// Readability: Using descriptive names for breakpoints improves the readability and maintainability of your code.
+// Consistency: Ensures consistent breakpoint values are used throughout your stylesheets.
+$breakpoints: (
+  "mobile": 60rem,
+  "tablet-portrait": 90rem,
+  "tablet-landscape": 110rem,
+  "1200": 120rem,
+);
+
+// The respond-to mixin is defined to handle the media query logic. The mixin takes a single parameter $breakpoint, which corresponds to the keys in the $breakpoints map
+@mixin respond-to($breakpoint) {
+  // We use the map-get function to retrieve the breakpoint value from the $breakpoints map. This function takes two arguments: the map and the key. The key is the $breakpoint parameter passed to the mixin.
+  //$breakpoints: The map containing the breakpoint names and values.
+  //$breakpoint: The key whose value we want to retrieve from the map (e.g, tablet-landscape).
+  //$size: The variable that stores the breakpoint value (e.g., 480px).
+  $size: map-get($breakpoints, $breakpoint);
+
+  // check if the breakpoint value exists in the map.
+  @if $size {
+    // Create a media query for the given breakpoint
+    @media (max-width: $size) {
+      // Insert the nested styles provided when the mixin is called
+      @content;
+    }
+  }
+  // If the size value does not exist in the map, generate a warning
+  @else {
+    @warn 'Breakpoint #{$breakpoint} not found in $breakpoints map.';
+  }
+}

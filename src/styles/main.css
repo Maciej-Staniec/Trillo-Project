@@ -408,6 +408,11 @@ Layout stylings
   box-shadow: var(--shadow-dark);
   margin: 8rem auto;
 }
+@media (max-width: 120rem) {
+  .layout__main {
+    margin: 0;
+  }
+}
 .layout__nav-hotel {
   display: flex;
 }
