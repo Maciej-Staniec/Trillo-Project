@@ -27,10 +27,16 @@
 // Readability: Using descriptive names for breakpoints improves the readability and maintainability of your code.
 // Consistency: Ensures consistent breakpoint values are used throughout your stylesheets.
 $breakpoints: (
-  "mobile": 60rem,
-  "tablet-portrait": 90rem,
-  "tablet-landscape": 110rem,
-  "1200": 120rem,
+  // 600px / 16px = 37.5em
+  "mobile": 37.5em,
+  // 900px / 16px = 56.25em
+  "tablet-portrait": 56.25em,
+  // 1100px / 16px = 68.75em
+  "tablet-landscape": 68.75em,
+  // 1200px / 16px = 75em
+  "laptop": 75em,
+  // 1800px / 16px = 112.5em
+  "desktop-big": 112.5em
 );
 
 // The respond-to mixin is defined to handle the media query logic. The mixin takes a single parameter $breakpoint, which corresponds to the keys in the $breakpoints map
@@ -43,10 +49,20 @@ $breakpoints: (
 
   // check if the breakpoint value exists in the map.
   @if $size {
-    // Create a media query for the given breakpoint
-    @media (max-width: $size) {
-      // Insert the nested styles provided when the mixin is called
-      @content;
+    // check if the breakpoint name equals desktop-big. If not, apply max-width condition
+    @if $breakpoint != "desktop-big" {
+      // Create a media query for the given breakpoint
+      @media only screen and (max-width: $size) {
+        // Insert the nested styles provided when the mixin is called
+        @content;
+      }
+    }
+    // if the breakpoint name equals desktop-big then apply min-width condition
+    @else {
+      @media only screen and (min-width: $size) {
+        // Insert the nested styles provided when the mixin is called
+        @content;
+      }
     }
   }
   // If the size value does not exist in the map, generate a warning

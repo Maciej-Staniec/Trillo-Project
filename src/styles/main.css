@@ -88,6 +88,11 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -408,7 +413,7 @@ Layout stylings
   box-shadow: var(--shadow-dark);
   margin: 8rem auto;
 }
-@media (max-width: 120rem) {
+@media only screen and (max-width: 75em) {
   .layout__main {
     margin: 0;
   }
@@ -619,6 +624,11 @@ Sidebar styling
 }
 .sidebar__text {
   text-transform: uppercase;
+}
+@media only screen and (max-width: 68.75em) {
+  .sidebar__text {
+    font-size: 1.2rem;
+  }
 }
 .sidebar__footer {
   color: var(--color-grey-light-1);
