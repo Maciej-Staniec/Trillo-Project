@@ -15,7 +15,12 @@ html {
     font-size: 75%;
   }
 
-  @include respond-to("tablet-lanscape") {
+  @include respond-to("tablet-portrait") {
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include respond-to("mobile") {
+    font-size: 50%; // 1rem = 8px
   }
 }
 

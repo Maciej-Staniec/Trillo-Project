@@ -93,6 +93,16 @@ html {
     font-size: 75%;
   }
 }
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -421,6 +431,11 @@ Layout stylings
 .layout__nav-hotel {
   display: flex;
 }
+@media only screen and (max-width: 56.25em) {
+  .layout__nav-hotel {
+    flex-direction: column;
+  }
+}
 .layout__hotel {
   flex: 1 0;
   /*
@@ -587,9 +602,23 @@ Sidebar styling
 .sidebar__nav {
   margin-top: 2.4rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .sidebar__nav {
+    display: flex;
+    margin: 0;
+    justify-content: space-evenly;
+  }
+}
 .sidebar__item {
   list-style: none;
   position: relative;
+}
+@media only screen and (max-width: 56.25em) {
+  .sidebar__item {
+    flex: 1 auto;
+    display: flex;
+    justify-content: center;
+  }
 }
 .sidebar__item::before {
   content: "";
@@ -616,6 +645,16 @@ Sidebar styling
   align-items: center;
   gap: 2.4rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .sidebar__link:link, .sidebar__link:visited {
+    gap: 1.2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .sidebar__link:link, .sidebar__link:visited {
+    padding: 1.2rem 2.4rem;
+  }
+}
 .sidebar__icon {
   fill: currentColor;
   display: inline-block;
@@ -635,4 +674,9 @@ Sidebar styling
   padding: 3.2rem;
   font-size: 1.2rem;
   text-align: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .sidebar__footer {
+    display: none;
+  }
 }

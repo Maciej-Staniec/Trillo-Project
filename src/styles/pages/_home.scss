@@ -21,6 +21,9 @@ Layout stylings
   // Container spanning the sidebar and the hotel content (excluding the header)
   &__nav-hotel {
     display: flex; // Uses flexbox ensuring a flexible and adaptive layout.
+    @include respond-to("tablet-portrait") {
+      flex-direction: column;
+    }
   }
 
   // Main container for hotel content
@@ -216,12 +219,23 @@ Sidebar styling
   // Styles for the navigation container within the sidebar.
   &__nav {
     margin-top: 2.4rem; // Adds top margin to space the nav from any elements above it.
+    @include respond-to("tablet-portrait") {
+      display: flex;
+      // flex-direction: row;
+      margin: 0;
+      justify-content: space-evenly;
+    }
   }
 
   // Styles for individual navigation items within the sidebar.
   &__item {
     list-style: none; // Removes default list styling.
     position: relative; // Positioned relative for absolutely positioned pseudo-elements.
+    @include respond-to("tablet-portrait") {
+      flex: 1 auto;
+      display: flex;
+      justify-content: center;
+    }
 
     // Pseudo-element for decorative purposes before each nav item.
     &::before {
@@ -255,6 +269,14 @@ Sidebar styling
     z-index: 10; // Ensures it's on top of the animated highlight (::before element of the __item)
     align-items: center; // Centers items vertically within the link.
     gap: 2.4rem; // Spaces the text from the icon.
+
+    @include respond-to("tablet-portrait") {
+      gap: 1.2rem;
+    }
+
+    @include respond-to("mobile") {
+      padding: 1.2rem 2.4rem;
+    }
   }
 
   // Icon style within the link.
@@ -279,5 +301,9 @@ Sidebar styling
     padding: 3.2rem; // Padding around the footer text for spacing.
     font-size: 1.2rem; // Smaller font size for less emphasis.
     text-align: center; // Centers text horizontally within the footer.
+
+    @include respond-to("tablet-portrait") {
+      display: none;
+    }
   }
 }

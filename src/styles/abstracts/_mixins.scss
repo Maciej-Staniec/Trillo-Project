@@ -49,7 +49,7 @@ $breakpoints: (
 
   // check if the breakpoint value exists in the map.
   @if $size {
-    // check if the breakpoint name equals desktop-big. If not, apply max-width condition
+    // check if breakpoint name is different from "desktop-big". If true then apply the max-width condition
     @if $breakpoint != "desktop-big" {
       // Create a media query for the given breakpoint
       @media only screen and (max-width: $size) {
@@ -57,7 +57,7 @@ $breakpoints: (
         @content;
       }
     }
-    // if the breakpoint name equals desktop-big then apply min-width condition
+    // if the above statement is false then apply the min-width condition
     @else {
       @media only screen and (min-width: $size) {
         // Insert the nested styles provided when the mixin is called
