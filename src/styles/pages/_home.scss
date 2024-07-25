@@ -21,7 +21,7 @@ Layout stylings
   // Container spanning the sidebar and the hotel content (excluding the header)
   &__nav-hotel {
     display: flex; // Uses flexbox ensuring a flexible and adaptive layout.
-    @include respond-to("tablet-portrait") {
+    @include respond-to("tablet-900") {
       flex-direction: column;
     }
   }
@@ -219,7 +219,7 @@ Sidebar styling
   // Styles for the navigation container within the sidebar.
   &__nav {
     margin-top: 2.4rem; // Adds top margin to space the nav from any elements above it.
-    @include respond-to("tablet-portrait") {
+    @include respond-to("tablet-900") {
       display: flex;
       // flex-direction: row;
       margin: 0;
@@ -270,7 +270,7 @@ Sidebar styling
     align-items: center; // Centers items vertically within the link.
     gap: 2.4rem; // Spaces the text from the icon.
 
-    @include respond-to("tablet-portrait") {
+    @include respond-to("tablet-900") {
       gap: 1.2rem;
     }
 
@@ -290,7 +290,7 @@ Sidebar styling
   // Styling for the text within each link, making it uppercase for visual distinction.
   &__text {
     text-transform: uppercase; // Enhances visibility and style.
-    @include respond-to("tablet-landscape") {
+    @include respond-to("tablet-1100") {
       font-size: 1.2rem;
     }
   }
@@ -302,7 +302,7 @@ Sidebar styling
     font-size: 1.2rem; // Smaller font size for less emphasis.
     text-align: center; // Centers text horizontally within the footer.
 
-    @include respond-to("tablet-portrait") {
+    @include respond-to("tablet-900") {
       display: none;
     }
   }

@@ -126,11 +126,26 @@ Hotel details section stylings
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    padding: 3.2rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+    @include respond-to("tablet-700") {
+      flex-direction: column;
+    }
   }
+
   &__item {
     flex: 0 0 50%;
     position: relative;
     margin-bottom: 0.8rem;
+    @include respond-to("tablet-1000") {
+      font-size: 1.2rem;
+    }
+
+    @include respond-to("tablet-700") {
+      flex: 1 auto;
+    }
+
     &::before {
       content: "";
       margin-right: 0.8rem;
@@ -147,6 +162,9 @@ Hotel details section stylings
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &-text {
+      font-size: 1.2rem;
+    }
     &-photo {
       @include avatar-styling;
       border: 3px solid #fff;

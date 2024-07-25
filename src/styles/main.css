@@ -50,6 +50,7 @@ The CSS Custom Properties (CSS Variables) specification specifically recommends 
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #333;
   --shadow-dark: 0 1rem 4rem 1rem rgba(0, 0, 0, 0.25);
+  --line: 1px solid var(--color-grey-light-2);
 }
 
 .btn-inline {
@@ -259,11 +260,29 @@ Hotel details section stylings
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 3.2rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+}
+@media only screen and (max-width: 43.75em) {
+  .feature__list {
+    flex-direction: column;
+  }
 }
 .feature__item {
   flex: 0 0 50%;
   position: relative;
   margin-bottom: 0.8rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .feature__item {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .feature__item {
+    flex: 1 auto;
+  }
 }
 .feature__item::before {
   content: "";
@@ -281,6 +300,9 @@ Hotel details section stylings
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.feature__recommendations-text {
+  font-size: 1.2rem;
 }
 .feature__recommendations-photo {
   height: 4rem;
@@ -612,13 +634,6 @@ Sidebar styling
 .sidebar__item {
   list-style: none;
   position: relative;
-}
-@media only screen and (max-width: 56.25em) {
-  .sidebar__item {
-    flex: 1 auto;
-    display: flex;
-    justify-content: center;
-  }
 }
 .sidebar__item::before {
   content: "";

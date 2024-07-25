@@ -29,10 +29,16 @@
 $breakpoints: (
   // 600px / 16px = 37.5em
   "mobile": 37.5em,
+  // 700px / 16px = 43.75em
+  "tablet-700": 43.75em,
+  //800px / 16px = 50em
+  "tablet-800": 50em,
   // 900px / 16px = 56.25em
-  "tablet-portrait": 56.25em,
+  "tablet-900": 56.25em,
+  // 1000px / 16px = 62.5em
+  "tablet-1000": 62.5em,
   // 1100px / 16px = 68.75em
-  "tablet-landscape": 68.75em,
+  "tablet-1100": 68.75em,
   // 1200px / 16px = 75em
   "laptop": 75em,
   // 1800px / 16px = 112.5em

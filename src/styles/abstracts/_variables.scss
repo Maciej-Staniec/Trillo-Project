@@ -59,4 +59,7 @@ The CSS Custom Properties (CSS Variables) specification specifically recommends 
 
   // Box shadows
   --shadow-dark: 0 1rem 4rem 1rem rgba(0, 0, 0, 0.25);
+
+  // Border lines
+  --line: 1px solid var(--color-grey-light-2);
 }
