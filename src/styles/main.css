@@ -99,7 +99,7 @@ html {
     font-size: 56.25%;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 50em) {
   html {
     font-size: 50%;
   }
@@ -121,17 +121,32 @@ body {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 62.5em) {
+  .heading-primary {
+    font-size: 2.2rem;
+  }
+}
 
 .heading-secondary {
   font-size: 2rem;
   font-weight: 300;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 62.5em) {
+  .heading-secondary {
+    font-size: 1.8rem;
+  }
+}
 
 .heading-tertiary {
   font-size: 1.8rem;
   font-weight: 300;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 62.5em) {
+  .heading-tertiary {
+    font-size: 1.6rem;
+  }
 }
 
 /* 
@@ -264,25 +279,10 @@ Hotel details section stylings
   border-top: var(--line);
   border-bottom: var(--line);
 }
-@media only screen and (max-width: 43.75em) {
-  .feature__list {
-    flex-direction: column;
-  }
-}
 .feature__item {
   flex: 0 0 50%;
   position: relative;
   margin-bottom: 0.8rem;
-}
-@media only screen and (max-width: 62.5em) {
-  .feature__item {
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (max-width: 43.75em) {
-  .feature__item {
-    flex: 1 auto;
-  }
 }
 .feature__item::before {
   content: "";
@@ -334,8 +334,8 @@ Hotel details section stylings
   font-family: sans-serif;
   color: var(--color-grey-light-2);
   position: absolute;
-  top: -34%;
-  left: -1%;
+  top: -7.7rem;
+  left: -0.5rem;
 }
 .review__header {
   display: flex;
@@ -635,6 +635,13 @@ Sidebar styling
   list-style: none;
   position: relative;
 }
+@media only screen and (max-width: 56.25em) {
+  .sidebar__item {
+    flex: 1 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
 .sidebar__item::before {
   content: "";
   position: absolute;
@@ -659,6 +666,11 @@ Sidebar styling
   z-index: 10;
   align-items: center;
   gap: 2.4rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .sidebar__link:link, .sidebar__link:visited {
+    padding: 1.6rem 2.4rem;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .sidebar__link:link, .sidebar__link:visited {

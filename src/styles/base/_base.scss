@@ -19,7 +19,7 @@ html {
     font-size: 56.25%; // 1rem = 9px
   }
 
-  @include respond-to("mobile") {
+  @include respond-to("tablet-800") {
     font-size: 50%; // 1rem = 8px
   }
 }

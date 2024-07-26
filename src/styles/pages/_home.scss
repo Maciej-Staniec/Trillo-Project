@@ -231,7 +231,7 @@ Sidebar styling
   &__item {
     list-style: none; // Removes default list styling.
     position: relative; // Positioned relative for absolutely positioned pseudo-elements.
-    @include respond-to("tablet-portrait") {
+    @include respond-to("tablet-900") {
       flex: 1 auto;
       display: flex;
       justify-content: center;
@@ -269,6 +269,10 @@ Sidebar styling
     z-index: 10; // Ensures it's on top of the animated highlight (::before element of the __item)
     align-items: center; // Centers items vertically within the link.
     gap: 2.4rem; // Spaces the text from the icon.
+
+    @include respond-to("tablet-1000") {
+      padding: 1.6rem 2.4rem;
+    }
 
     @include respond-to("tablet-900") {
       gap: 1.2rem;
