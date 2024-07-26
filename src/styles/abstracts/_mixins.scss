@@ -1,34 +1,15 @@
-// Center flexbox content
-@mixin flexbox-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-// Details section spacing
-@mixin details-padding {
-  padding: 2.4rem;
-}
-
-// Details section flex gap
-@mixin details-gap {
-  gap: 3.2rem;
-}
-
-@mixin avatar-styling {
-  height: 4rem; // Fixed height for the photo.
-  width: 4rem; // Fixed width, maintaining aspect ratio.
-  border-radius: 100px; // Highly rounded corners for a softened edge.
-}
-
 // In SCSS, you can define breakpoints using a map, which allows you to store key-value pairs. Each key represents a breakpoint name, and each value represents the corresponding pixel value for that breakpoint.
 //Benefits of Using a Map for Breakpoints
 // Centralized Management: All breakpoint values are defined in one place, making it easy to manage and update them.
 // Readability: Using descriptive names for breakpoints improves the readability and maintainability of your code.
 // Consistency: Ensures consistent breakpoint values are used throughout your stylesheets.
 $breakpoints: (
+  // 400px / 16px = 25em
+  "mobile-400": 25em,
+  // 500px / 16px = 31.25em
+  "mobile-500": 31.25em,
   // 600px / 16px = 37.5em
-  "mobile": 37.5em,
+  "mobile-600": 37.5em,
   // 700px / 16px = 43.75em
   "tablet-700": 43.75em,
   //800px / 16px = 50em
@@ -74,5 +55,22 @@ $breakpoints: (
   // If the size value does not exist in the map, generate a warning
   @else {
     @warn 'Breakpoint #{$breakpoint} not found in $breakpoints map.';
+  }
+}
+
+// Center flexbox content
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin avatar-styling {
+  height: 4rem; // Fixed height for the photo.
+  width: 4rem; // Fixed width, maintaining aspect ratio.
+  border-radius: 100px; // Highly rounded corners for a softened edge.
+  @include respond-to("tablet-700") {
+    height: 4.8rem;
+    width: 4.8rem;
   }
 }

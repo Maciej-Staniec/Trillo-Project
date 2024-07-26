@@ -62,4 +62,10 @@ The CSS Custom Properties (CSS Variables) specification specifically recommends 
 
   // Border lines
   --line: 1px solid var(--color-grey-light-2);
+
+  // Paddings
+  --default-comp-pad: 2.4rem;
+
+  // Flex gaps
+  --gap-details: 3.2rem;
 }
