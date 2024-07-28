@@ -100,6 +100,22 @@
             </p>
           </footer>
         </aside>
+        <!-- Responsive searchbar -->
+        <div class="searchbar">
+          <form action="#" class="search searchbar__form">
+            <input
+              type="text"
+              name="search__input"
+              id="search__input"
+              class="search__input searchbar__input"
+              placeholder="Search hotels" />
+            <button type="submit" class="search__button">
+              <svg class="search__icon">
+                <use xlink:href="img/solid.svg#magnifying-glass"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
         <!-- Hotel Content -->
         <main class="layout__hotel">
           <!-- Gallery component -->
@@ -108,19 +124,19 @@
               <img
                 src="img/hotel-1.jpg"
                 alt="Photo of hotel 1"
-                class="gallery__photo" />
+                class="gallery__photo gallery__photo--1" />
             </figure>
             <figure class="gallery__item">
               <img
                 src="img/hotel-2.jpg"
                 alt="Photo of hotel 2"
-                class="gallery__photo" />
+                class="gallery__photo gallery__photo--2" />
             </figure>
             <figure class="gallery__item">
               <img
                 src="img/hotel-3.jpg"
                 alt="Photo of hotel 3"
-                class="gallery__photo" />
+                class="gallery__photo gallery__photo--3" />
             </figure>
           </section>
           <section class="overview">
@@ -267,7 +283,7 @@
           </div>
           <!-- Call to Action (CTA) Section -->
           <section class="cta">
-            <h1 class="heading-secondary"
+            <h1 class="cta__heading heading-secondary"
               >Good news! We have 4 free rooms for your selected dates!</h1
             >
             <button class="btn">

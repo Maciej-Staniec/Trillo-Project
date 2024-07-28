@@ -103,6 +103,9 @@ Header styling
   @include flexbox-center; // Centers children flex items.
   flex: 0 0 40%; // Flex basis of 40% with no growth or shrink.
 
+  @include respond-to("mobile-500") {
+    display: none;
+  }
   &__input {
     font-family: inherit;
     color: inherit;
@@ -208,6 +211,24 @@ Header styling
 
 /* 
 ***********************************************
+Responsive Searchbar styling
+*********************************************** 
+*/
+.searchbar {
+  display: none;
+  @include respond-to("mobile-500") {
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    &__form {
+      flex: 0 70%;
+      display: flex !important;
+    }
+  }
+}
+
+/* 
+***********************************************
 Sidebar styling
 *********************************************** 
 */
@@ -219,12 +240,25 @@ Sidebar styling
   display: flex;
   justify-content: space-between; // Spaces child elements vertically from top to bottom.
 
+  @include respond-to("mobile-500") {
+    @include touch-device {
+      overflow-x: auto; // Enable horizontal scrolling for touch devices
+      white-space: nowrap; // Prevent items from wrapping to the next line
+      // Hide scrollbar for Webkit browsers (Chrome, Safari)
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      // Hide scrollbar for Firefox
+      scrollbar-width: none; // For Firefox
+    }
+  }
+
   // Styles for the navigation container within the sidebar.
   &__nav {
     margin-top: 2.4rem; // Adds top margin to space the nav from any elements above it.
     @include respond-to("tablet-900") {
       display: flex;
-      // flex-direction: row;
       margin: 0;
       justify-content: space-evenly;
     }
@@ -235,12 +269,12 @@ Sidebar styling
     list-style: none; // Removes default list styling.
     position: relative; // Positioned relative for absolutely positioned pseudo-elements.
     @include respond-to("tablet-900") {
-      flex: 1 auto;
+      flex: 1 0 14.4rem; // Allowing items to expand and prevent shrinking. The flex-grow styling has to be enabled for the animation purposes.
       display: flex;
-      justify-content: center;
+      justify-content: center; // Center the content of each nav list items.
     }
 
-    // Pseudo-element for decorative purposes before each nav item.
+    // Pseudo-element for animation purposes of each nav item.
     &::before {
       content: ""; // Necessary for the pseudo-element to display.
       position: absolute; // Positioned relative to the parent item.

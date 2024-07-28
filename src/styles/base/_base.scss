@@ -10,7 +10,7 @@
 html {
   font-size: 62.5%; // 1rem = 10 px, 10px / 16px = 62.5%
   box-sizing: border-box;
-
+  overflow-x: hidden;
   @include respond-to("desktop-big") {
     font-size: 75%;
   }
@@ -25,6 +25,7 @@ html {
 }
 
 body {
+  overflow: inherit;
   // If 'Open Sans' fails to load, load a sans-serif font.
   font-family: "Open Sans", sans-serif;
 
@@ -35,7 +36,6 @@ body {
   line-height: 1.5;
   // Default font size
   font-size: 1.4rem;
-
   // Default font colour
   color: var(--color-grey-dark-2);
 

@@ -58,6 +58,15 @@ $breakpoints: (
   }
 }
 
+
+// Mixin to detect touch devices
+@mixin touch-device {
+  // Media query for devices that have no hover and use coarse pointers (touch devices)
+  @media (hover: none) and (pointer: coarse) {
+    @content; // Include the nested touch-device media query content
+  }
+}
+
 // Center flexbox content
 @mixin flexbox-center {
   display: flex;
