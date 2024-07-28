@@ -6,7 +6,7 @@ Gallery styling
 
 .gallery {
   display: flex;
-
+  // Make images reponsive
   &__photo {
     width: 100%;
     display: block;

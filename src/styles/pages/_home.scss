@@ -243,7 +243,6 @@ Sidebar styling
   @include respond-to("mobile-500") {
     @include touch-device {
       overflow-x: auto; // Enable horizontal scrolling for touch devices
-      white-space: nowrap; // Prevent items from wrapping to the next line
       // Hide scrollbar for Webkit browsers (Chrome, Safari)
       ::-webkit-scrollbar {
         display: none;
@@ -272,6 +271,7 @@ Sidebar styling
       flex: 1 0 14.4rem; // Allowing items to expand and prevent shrinking. The flex-grow styling has to be enabled for the animation purposes.
       display: flex;
       justify-content: center; // Center the content of each nav list items.
+      white-space: nowrap; // Prevent items from wrapping to the next line
     }
 
     // Pseudo-element for animation purposes of each nav item.

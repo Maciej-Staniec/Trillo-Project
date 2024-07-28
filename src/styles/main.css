@@ -728,7 +728,6 @@ Sidebar styling
 @media only screen and (max-width: 31.25em) and (hover: none) and (pointer: coarse) {
   .sidebar {
     overflow-x: auto;
-    white-space: nowrap;
     scrollbar-width: none;
   }
   .sidebar ::-webkit-scrollbar {
@@ -754,6 +753,7 @@ Sidebar styling
     flex: 1 0 14.4rem;
     display: flex;
     justify-content: center;
+    white-space: nowrap;
   }
 }
 .sidebar__item::before {
