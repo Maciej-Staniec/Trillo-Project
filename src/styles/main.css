@@ -78,7 +78,11 @@ The CSS Custom Properties (CSS Variables) specification specifically recommends 
   transition: margin-left 0.2s;
 }
 
-/* Global Resets */
+/* 
+***********************************************
+Global Resets
+*********************************************** 
+*/
 *,
 *::before,
 *::after {
@@ -529,13 +533,13 @@ Layout stylings
 .layout__hotel {
   flex: 1 0;
   /*
-  flex: 1 breakdown
+    flex: 1 breakdown
 
-  flex-grow: 1: The flex item can grow to take up any available space in the flex container. The 1 value means it will take up a proportion of the available space relative to other flex items with a flex-grow value.
+    flex-grow: 1: The flex item can grow to take up any available space in the flex container. The 1 value means it will take up a proportion of the available space relative to other flex items with a flex-grow value.
 
-  flex-shrink: 1: The flex item can shrink if necessary to fit into the container. The 1 value means it will shrink in proportion to other flex items with a flex-shrink value.
+    flex-shrink: 1: The flex item can shrink if necessary to fit into the container. The 1 value means it will shrink in proportion to other flex items with a flex-shrink value.
 
-  flex-basis: 0%: The initial size of the flex item before space is distributed according to flex-grow and flex-shrink. A 0 value means the item will start with zero width and grow based on the remaining space.
+    flex-basis: 0%: The initial size of the flex item before space is distributed according to flex-grow and flex-shrink. A 0 value means the item will start with zero width and grow based on the remaining space.
   */
 }
 .layout__hotel-details {

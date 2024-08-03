@@ -1,53 +1,47 @@
-/* Global Resets */
+/* 
+***********************************************
+Global Resets
+*********************************************** 
+*/
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+  margin: 0; // Removes default margin from all elements and pseudo-elements.
+  padding: 0; // Removes default padding from all elements and pseudo-elements.
+  box-sizing: inherit; // Inherits the box-sizing property to ensure consistent box model behavior.
 }
 
 html {
-  font-size: 62.5%; // 1rem = 10 px, 10px / 16px = 62.5%
-  box-sizing: border-box;
-  overflow-x: hidden;
+  font-size: 62.5%; // Sets the base font size to 62.5% of the default (16px), making 1rem equal to 10px.
+  box-sizing: border-box; // Applies border-box box-sizing model to the entire document.
+  overflow-x: hidden; // Prevents horizontal overflow, hiding any content that exceeds the viewport width.
+
   @include respond-to("desktop-big") {
-    font-size: 75%;
+    font-size: 75%; // Increases the base font size to 75% (12px) on larger desktop screens.
   }
 
   @include respond-to("tablet-900") {
-    font-size: 56.25%; // 1rem = 9px
+    font-size: 56.25%; // Reduces the base font size to 56.25% (9px) on tablets with a width of 900px or less.
   }
 
   @include respond-to("tablet-800") {
-    font-size: 50%; // 1rem = 8px
+    font-size: 50%; // Further reduces the base font size to 50% (8px) on tablets with a width of 800px or less.
   }
 }
 
 body {
-  overflow: inherit;
-  // If 'Open Sans' fails to load, load a sans-serif font.
-  font-family: "Open Sans", sans-serif;
+  overflow: inherit; // Inherits the overflow property from its parent element (html in this case).
+  font-family: "Open Sans", sans-serif; // Sets the primary font to "Open Sans", with a fallback to any available sans-serif font.
+  font-weight: 400; // Sets the default font weight to 400 (normal).
+  line-height: 1.5; // Sets the default line height to 1.5 times the font size for better readability.
+  font-size: 1.4rem; // Sets the default font size to 1.4rem (14px).
+  color: var(--color-grey-dark-2); // Sets the default font color to a dark grey.
 
-  // Default font weight
-  font-weight: 400;
-
-  // Default line height
-  line-height: 1.5;
-  // Default font size
-  font-size: 1.4rem;
-  // Default font colour
-  color: var(--color-grey-dark-2);
-
-  // Default page background
+  // Sets a gradient background for the entire page, transitioning from a light primary color to a dark primary color.
   background-image: linear-gradient(
     to right bottom,
     var(--color-primary-light),
     var(--color-primary-dark)
   );
-
-  // Ensure body takes full height of viewport
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 100vh; // Ensures the body takes at least the full height of the viewport.
 }

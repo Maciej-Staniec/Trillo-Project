@@ -8,13 +8,11 @@ Layout stylings
   // Main content styling
   &__main {
     max-width: 120rem; // Sets a maximum width to ensure content does not stretch too wide on larger screens.
-    background-color: #fff;
-    box-shadow: var(
-      --shadow-dark
-    ); // Applies a dark shadow for 3D effect, enhancing the layer's visual separation from the background.
+    background-color: #fff; // Sets a white background color.
+    box-shadow: var(--shadow-dark); // Applies a dark shadow for 3D effect, enhancing the layer's visual separation from the background.
     margin: 8rem auto; // Centers the main content horizontally and gives it vertical spacing from the top of the web browser display window.
     @include respond-to("laptop") {
-      margin: 0;
+      margin: 0; // Removes the margin on laptop screens.
     }
   }
 
@@ -22,36 +20,33 @@ Layout stylings
   &__nav-hotel {
     display: flex; // Uses flexbox ensuring a flexible and adaptive layout.
     @include respond-to("tablet-900") {
-      flex-direction: column;
+      flex-direction: column; // Stacks elements vertically on tablet screens.
     }
   }
 
   // Main container for hotel content
   &__hotel {
-    // display: flex;
-    flex: 1 0;
+    flex: 1 0; // Flex-grow and flex-shrink are set to 1, flex-basis is 0%.
     /*
-  flex: 1 breakdown
+      flex: 1 breakdown
 
-  flex-grow: 1: The flex item can grow to take up any available space in the flex container. The 1 value means it will take up a proportion of the available space relative to other flex items with a flex-grow value.
+      flex-grow: 1: The flex item can grow to take up any available space in the flex container. The 1 value means it will take up a proportion of the available space relative to other flex items with a flex-grow value.
 
-  flex-shrink: 1: The flex item can shrink if necessary to fit into the container. The 1 value means it will shrink in proportion to other flex items with a flex-shrink value.
+      flex-shrink: 1: The flex item can shrink if necessary to fit into the container. The 1 value means it will shrink in proportion to other flex items with a flex-shrink value.
 
-  flex-basis: 0%: The initial size of the flex item before space is distributed according to flex-grow and flex-shrink. A 0 value means the item will start with zero width and grow based on the remaining space.
-  */
+      flex-basis: 0%: The initial size of the flex item before space is distributed according to flex-grow and flex-shrink. A 0 value means the item will start with zero width and grow based on the remaining space.
+    */
   }
 
   // Container for hotel reviews
   &__hotel-details {
-    display: flex; // Also uses flexbox to provide a consistent, aligned structure for reviews.
-    background-color: var(
-      --color-grey-light-2
-    ); // Sets a light grey background to differentiate the review section from other content areas.
-    justify-content: space-around;
-    padding: 2.4rem;
-    gap: 3.2rem;
+    display: flex; // Uses flexbox to provide a consistent, aligned structure for reviews.
+    background-color: var(--color-grey-light-2); // Sets a light grey background to differentiate the review section from other content areas.
+    justify-content: space-around; // Distributes space evenly around each child element.
+    padding: 2.4rem; // Adds padding inside the container.
+    gap: 3.2rem; // Adds space between child elements.
     @include respond-to("mobile-600") {
-      flex-direction: column;
+      flex-direction: column; // Stacks elements vertically on mobile screens.
     }
   }
 }
@@ -71,7 +66,7 @@ Header styling
 
 // Styling for the logo within the header.
 .logo {
-  height: 3.6rem;
+  height: 3.6rem; // Sets a fixed height for the logo.
   margin-left: 2.4rem; // Adds a left margin to space out the logo from the content.
   &:hover {
     // Defines hover state styles for the logo.
@@ -87,14 +82,10 @@ Header styling
     transform: scale(1); // Logo starts and ends at its original scale.
   }
   50% {
-    transform: scale(
-      1.2
-    ); // Logo scales up to 1.2 times its size midway through the animation.
+    transform: scale(1.2); // Logo scales up to 1.2 times its size midway through the animation.
   }
   80% {
-    transform: scale(
-      0.9
-    ); // Logo scales down to 0.9 times its size before finishing.
+    transform: scale(0.9); // Logo scales down to 0.9 times its size before finishing.
   }
 }
 
@@ -104,29 +95,27 @@ Header styling
   flex: 0 0 40%; // Flex basis of 40% with no growth or shrink.
 
   @include respond-to("mobile-500") {
-    display: none;
+    display: none; // Hides the search bar on mobile screens.
   }
   &__input {
-    font-family: inherit;
-    color: inherit;
-    background-color: var(--color-grey-light-2);
-    border-style: none; // No border for the input.
-    width: 90%; // Input width is 90% of its container.
-    padding: 1rem 2rem; // Padding around the text inside the input box.
-    border-radius: 50px; // Rounded corners with a radius of 50px.
+    font-family: inherit; // Inherits font family from the parent element.
+    color: inherit; // Inherits color from the parent element.
+    background-color: var(--color-grey-light-2); // Sets a light grey background color.
+    border-style: none; // Removes border.
+    width: 90%; // Sets the width to 90% of its container.
+    padding: 1rem 2rem; // Adds padding around the text inside the input box.
+    border-radius: 50px; // Rounds the corners of the input box.
     transition: all 0.2s; // Smooth transition for all properties over 0.2 seconds.
     &:focus {
       // Styles when the input is focused.
-      background-color: var(
-        --color-grey-light-3
-      ); // Darker grey background on focus.
+      background-color: var(--color-grey-light-3); // Sets a darker grey background on focus.
       outline: none; // Removes the outline to clean up the focus state.
       width: 100%; // Expands to full width when focused.
     }
     &::placeholder {
       // Styling for the placeholder text.
-      font-weight: 100;
-      color: var(--color-grey-light-4);
+      font-weight: 100; // Sets a light font weight.
+      color: var(--color-grey-light-4); // Sets a lighter grey color for the placeholder text.
     }
   }
 
@@ -134,14 +123,14 @@ Header styling
     background-color: transparent; // Transparent background for the button.
     width: 1.6rem; // Fixed width for the button.
     border-style: none; // No border for the button.
-    @include flexbox-center; // Center alignment for the icon inside the button.
+    @include flexbox-center; // Centers the icon inside the button.
     margin-left: -3rem; // Negative margin to overlap with the input.
   }
 
   &__icon {
-    width: 1.6rem;
-    height: 1.6rem;
-    fill: var(--color-grey-dark-1);
+    width: 1.6rem; // Fixed width for the icon.
+    height: 1.6rem; // Fixed height for the icon.
+    fill: var(--color-grey-dark-1); // Sets the fill color for the icon.
   }
 }
 
@@ -159,9 +148,7 @@ Header styling
     &:hover,
     &:active {
       // Hover and active state styles.
-      background-color: var(
-        --color-grey-light-2
-      ); // Light grey background on hover/active.
+      background-color: var(--color-grey-light-2); // Light grey background on hover/active.
     }
   }
 
@@ -176,13 +163,11 @@ Header styling
     position: absolute; // Absolutely positioned within the icon container.
     right: 20%; // Positioned 20% from the right edge.
     top: 25%; // Positioned 25% from the top.
-    display: flex; // flex layout to center content.
+    display: flex; // Flex layout to center content.
     @include flexbox-center; // Centers content inside the notification badge.
-    background-color: var(
-      --color-primary
-    ); // primary color for high visibility.
-    color: #fff;
-    font-size: 1rem;
+    background-color: var(--color-primary); // Primary color for high visibility.
+    color: #fff; // White text color.
+    font-size: 1rem; // Font size for the notification text.
     width: 1.7rem; // Diameter of the circular badge.
     height: 1.7rem; // Height matches the width to create a circle.
     border-radius: 50%; // Fully rounded corners to form a circle.
@@ -197,14 +182,12 @@ Header styling
     &:hover,
     &:active {
       // Hover and active state styles.
-      background-color: var(
-        --color-grey-light-2
-      ); // Light grey background on hover/active.
+      background-color: var(--color-grey-light-2); // Light grey background on hover/active.
       cursor: pointer; // Changes the cursor to indicate clickable item.
     }
     &-photo {
       // User profile photo styling.
-      @include avatar-styling;
+      @include avatar-styling; // Apply avatar styling mixin.
     }
   }
 }
@@ -215,14 +198,14 @@ Responsive Searchbar styling
 *********************************************** 
 */
 .searchbar {
-  display: none;
+  display: none; // Initially hide the searchbar.
   @include respond-to("mobile-500") {
-    height: 8rem;
-    display: flex;
-    justify-content: center;
+    height: 8rem; // Fixed height for the searchbar on mobile screens.
+    display: flex; // Flex layout to align items.
+    justify-content: center; // Center-align the form inside the searchbar.
     &__form {
-      flex: 0 70%;
-      display: flex !important;
+      flex: 0 70%; // Flex basis of 70% with no growth or shrink.
+      display: flex !important; // Ensure the form is displayed as flex.
     }
   }
 }
@@ -234,22 +217,22 @@ Sidebar styling
 */
 
 .sidebar {
-  background-color: var(--color-grey-dark-3);
+  background-color: var(--color-grey-dark-3); // Dark grey background color for the sidebar.
   flex: 0 0 18%; // The sidebar is non-flexible, with a fixed width of 18% of its container.
   flex-direction: column; // Stacks child elements vertically.
-  display: flex;
+  display: flex; // Enables flexbox layout.
   justify-content: space-between; // Spaces child elements vertically from top to bottom.
 
   @include respond-to("mobile-500") {
     @include touch-device {
-      overflow-x: auto; // Enable horizontal scrolling for touch devices
-      // Hide scrollbar for Webkit browsers (Chrome, Safari)
+      overflow-x: auto; // Enable horizontal scrolling for touch devices.
+      // Hide scrollbar for Webkit browsers (Chrome, Safari).
       ::-webkit-scrollbar {
-        display: none;
+        display: none; // Hide scrollbar.
       }
 
-      // Hide scrollbar for Firefox
-      scrollbar-width: none; // For Firefox
+      // Hide scrollbar for Firefox.
+      scrollbar-width: none; // For Firefox.
     }
   }
 
@@ -257,9 +240,9 @@ Sidebar styling
   &__nav {
     margin-top: 2.4rem; // Adds top margin to space the nav from any elements above it.
     @include respond-to("tablet-900") {
-      display: flex;
-      margin: 0;
-      justify-content: space-evenly;
+      display: flex; // Flex layout for nav items.
+      margin: 0; // Remove margin on tablet screens.
+      justify-content: space-evenly; // Space items evenly within the nav.
     }
   }
 
@@ -269,9 +252,9 @@ Sidebar styling
     position: relative; // Positioned relative for absolutely positioned pseudo-elements.
     @include respond-to("tablet-900") {
       flex: 1 0 14.4rem; // Allowing items to expand and prevent shrinking. The flex-grow styling has to be enabled for the animation purposes.
-      display: flex;
-      justify-content: center; // Center the content of each nav list items.
-      white-space: nowrap; // Prevent items from wrapping to the next line
+      display: flex; // Flex layout for nav items.
+      justify-content: center; // Center the content of each nav list item.
+      white-space: nowrap; // Prevent items from wrapping to the next line.
     }
 
     // Pseudo-element for animation purposes of each nav item.
@@ -280,7 +263,7 @@ Sidebar styling
       position: absolute; // Positioned relative to the parent item.
       top: 0; // Aligns to the top of the parent item.
       left: 0; // Aligns to the left of the parent item.
-      background-color: var(--color-primary);
+      background-color: var(--color-primary); // Primary color for the pseudo-element.
       width: 3px; // Initial thin line style of the decoration on animation.
       height: 100%; // Full height of the parent item.
       transform: scaleY(0); // Initially scaled to 0, invisible vertically.
@@ -300,23 +283,23 @@ Sidebar styling
   &__link:visited {
     display: flex; // Displays content in a flex row.
     text-decoration: none; // No underlines on the link.
-    color: var(--color-grey-light-1);
+    color: var(--color-grey-light-1); // Light grey color for the link text.
     padding: 1.6rem 3.2rem; // Padding around the text for better clickability.
     position: relative; // Positioned relative for stacking context.
-    z-index: 10; // Ensures it's on top of the animated highlight (::before element of the __item)
+    z-index: 10; // Ensures it's on top of the animated highlight (::before element of the __item).
     align-items: center; // Centers items vertically within the link.
     gap: 2.4rem; // Spaces the text from the icon.
 
     @include respond-to("tablet-1000") {
-      padding: 1.6rem 2.4rem;
+      padding: 1.6rem 2.4rem; // Adjusts padding on tablet screens.
     }
 
     @include respond-to("tablet-900") {
-      gap: 1.2rem;
+      gap: 1.2rem; // Reduces gap on tablet screens.
     }
 
     @include respond-to("mobile-600") {
-      padding: 1.2rem 2.4rem;
+      padding: 1.2rem 2.4rem; // Adjusts padding on mobile screens.
     }
   }
 
@@ -332,11 +315,11 @@ Sidebar styling
   &__text {
     text-transform: uppercase; // Enhances visibility and style.
     @include respond-to("tablet-1100") {
-      font-size: 1.2rem;
+      font-size: 1.2rem; // Adjusts font size on tablet screens.
     }
   }
 
-  // Styles for the sidebar footer
+  // Styles for the sidebar footer.
   &__footer {
     color: var(--color-grey-light-1); // Light grey color for footer text.
     padding: 3.2rem; // Padding around the footer text for spacing.
@@ -344,7 +327,7 @@ Sidebar styling
     text-align: center; // Centers text horizontally within the footer.
 
     @include respond-to("tablet-900") {
-      display: none;
+      display: none; // Hides the footer on tablet screens.
     }
   }
 }

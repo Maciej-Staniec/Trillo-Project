@@ -5,6 +5,7 @@ Trillo is a single home page website developed to learn advanced SCSS and Flexbo
 ## Table of Contents
 
 - [Description](#description)
+- [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -16,16 +17,28 @@ Trillo is a single home page website developed to learn advanced SCSS and Flexbo
 
 Natour is a learning project that covers:
 
-- Semantic HTML and its structure
-- Inheritance, cascading, and value processing in CSS
-- The visual formatting model (box model and its types, positioning schemes)
-- Stacking contexts
-- Component-driven design using the BEM technique and the 7-1 pattern
-- Creating layouts with Flexbox
-- Responsive design principles
-- Creating a simple build process to optimize source files
+- **Semantic HTML:** Structuring HTML in a meaningful and accessible way.
+- **Inheritance, Cascading, and Value Processing in CSS:** Understanding how CSS rules are applied and inherited.
+- **Visual Formatting Model:** Learning about the box model, positioning schemes, and stacking contexts.
+- **SCSS (Sass) Preprocessing:** Utilizing SCSS for more powerful and flexible stylesheets.
+- **Component-Driven Design:** Breaking down the UI into reusable components.
+- **Component-Driven Design:** Breaking down the UI into reusable components.
+- **7-1 Pattern:** Organizing SCSS files using the 7-1 pattern for better maintainability.
+- **Animations:** Adding engaging animations using SCSS
+- **Flexbox Layouts:** Creating layouts with Flexbox and mastering modern CSS layout techniques.
+- **Responsive Design:** Ensuring the site looks great on all devices, from desktops to mobile phones.
+- **Performance Optimization:** Implementing techniques to improve the loading speed and performance of the website.
+- **Cross-Browser Compatibility:** Ensuring the site works smoothly across different web browsers.
+- **Build Process:** Creating a simple build process to optimize source files using tools like Gulp.
 
 The project includes graphics provided by Jonas Schmedtmann for portfolio purposes.
+
+## Technologies
+
+- HTML5
+- SCSS (Sass)
+- CSS Flexbox
+- Gulp (for minifying CSS and JS files)
 
 ## Installation
 

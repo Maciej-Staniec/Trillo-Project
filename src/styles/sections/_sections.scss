@@ -5,15 +5,15 @@ Gallery styling
 */
 
 .gallery {
-  display: flex;
-  // Make images reponsive
+  display: flex; // Use flexbox to layout gallery items horizontally
+  // Make images responsive
   &__photo {
-    width: 100%;
-    display: block;
+    width: 100%; // Ensure the image takes the full width of its container
+    display: block; // Display as a block element
     @include respond-to("mobile-600") {
       &--2,
       &--3 {
-        display: none;
+        display: none; // Hide the 2nd and 3rd images on screens smaller than 600px
       }
     }
   }
@@ -25,102 +25,103 @@ Overview styling
 *********************************************** 
 */
 .overview {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--color-grey-light-3);
+  display: flex; // Use flexbox to align child elements horizontally
+  align-items: center; // Vertically align items in the center
+  justify-content: space-between; // Distribute space between items
+  border-bottom: 1px solid var(--color-grey-light-3); // Add a bottom border
 
   @include respond-to("mobile-600") {
-    flex-direction: column;
+    flex-direction: column; // Stack elements vertically on mobile screens
     & > *:not(:last-child) {
-      padding: var(--default-comp-pad);
+      padding: var(--default-comp-pad); // Add padding to all but the last child
     }
   }
   &__heading {
-    display: flex;
-    gap: 1.6rem;
-    margin-left: 2.4rem;
+    display: flex; // Use flexbox for child elements
+    gap: 1.6rem; // Add space between children
+    margin-left: 2.4rem; // Add left margin
     @include respond-to("mobile-600") {
-      // flex: 1 50%;
-      margin: 0;
+      margin: 0; // Remove margin on mobile screens
     }
   }
 
   &__stars {
-    @include flexbox-center;
-    gap: 0.4rem;
+    @include flexbox-center; // Center children using flexbox
+    gap: 0.4rem; // Add gap between star icons
     @include respond-to("mobile-600") {
-      margin: 0;
+      margin: 0; // Remove margin on mobile screens
     }
 
     &-item {
-      width: 1.6rem;
-      height: 1.6rem;
-      fill: var(--color-primary);
+      width: 1.6rem; // Set width for the star icons
+      height: 1.6rem; // Set height for the star icons
+      fill: var(--color-primary); // Fill star icons with the primary color
     }
   }
 
   &__container-location {
-    @include flexbox-center;
-    gap: 2.4rem;
+    @include flexbox-center; // Center children using flexbox
+    gap: 2.4rem; // Add gap between location elements
 
     @include respond-to("mobile-600") {
-      gap: 9.6rem;
-      padding-bottom: var(--default-comp-pad);
+      gap: 9.6rem; // Increase gap on mobile screens
+      padding-bottom: var(--default-comp-pad); // Add bottom padding
     }
   }
 
   &__location {
-    @include flexbox-center;
-    gap: 1.6rem;
+    @include flexbox-center; // Center children using flexbox
+    gap: 1.6rem; // Add gap between location icon and text
     &-icon {
-      width: 1.6rem;
-      height: 1.6rem;
-      fill: var(--color-primary);
+      width: 1.6rem; // Set width for the location icon
+      height: 1.6rem; // Set height for the location icon
+      fill: var(
+        --color-primary
+      ); // Fill the location icon with the primary color
     }
 
     &-text {
-      font-size: 1.2rem;
-      color: var(--color-primary);
-      background-color: transparent;
-      border: none;
-      position: relative;
-      cursor: pointer;
-      transition: all 0.2s;
+      font-size: 1.2rem; // Set font size for the location text
+      color: var(--color-primary); // Set text color to primary color
+      background-color: transparent; // Transparent background
+      border: none; // No border
+      position: relative; // Position relative for pseudo-element
+      cursor: pointer; // Change cursor to pointer on hover
+      transition: all 0.2s; // Smooth transition for all properties
       &::after {
-        content: "";
-        position: absolute;
-        top: 1.7rem;
-        left: 50%;
-        background-color: currentColor;
-        height: 1px;
-        width: 120%;
-        transform: translateX(-50%);
+        content: ""; // Empty content for the pseudo-element
+        position: absolute; // Position absolute for the pseudo-element
+        top: 1.7rem; // Position from the top
+        left: 50%; // Center horizontally
+        background-color: currentColor; // Use current text color
+        height: 1px; // Set height for the underline
+        width: 120%; // Set width for the underline
+        transform: translateX(-50%); // Center the underline
       }
       &:hover {
-        color: var(--color-grey-dark-3);
+        color: var(--color-grey-dark-3); // Change color on hover
       }
     }
   }
   &__score {
-    @include flexbox-center;
-    flex-direction: column;
-    color: var(--color-grey-light-1);
-    background-color: var(--color-primary);
-    padding: 1.2rem 1.6rem;
+    @include flexbox-center; // Center children using flexbox
+    flex-direction: column; // Stack children vertically
+    color: var(--color-grey-light-1); // Set text color
+    background-color: var(--color-primary); // Set background color
+    padding: 1.2rem 1.6rem; // Add padding
     @include respond-to("mobile-600") {
-      background-color: #fff;
-      color: var(--color-primary);
-      justify-content: flex-end;
-      padding: 0;
+      background-color: #fff; // Change background color on mobile screens
+      color: var(--color-primary); // Change text color on mobile screens
+      justify-content: flex-end; // Align items to the end
+      padding: 0; // Remove padding
     }
     &-average {
-      font-size: 2.4rem;
+      font-size: 2.4rem; // Set font size for the average score
     }
 
     &-votes {
-      text-transform: uppercase;
-      font-size: 1rem;
+      text-transform: uppercase; // Uppercase text
+      font-size: 1rem; // Set font size for the votes
     }
   }
 }
@@ -134,69 +135,69 @@ Hotel details section stylings
 // Features styling
 
 .features {
-  flex: 0 0 60%;
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: var(--default-comp-pad);
-  gap: var(--gap-details);
+  flex: 0 0 60%; // Set flex basis and prevent shrinking
+  background-color: #fff; // White background color
+  display: flex; // Use flexbox
+  justify-content: space-between; // Distribute space between children
+  flex-direction: column; // Stack children vertically
+  padding: var(--default-comp-pad); // Add padding
+  gap: var(--gap-details); // Add gap between children
 }
 .feature {
   &__description {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    display: flex; // Use flexbox
+    flex-direction: column; // Stack children vertically
+    gap: 1.2rem; // Add gap between paragraphs
     &-text {
-      text-align: justify;
-      line-height: 1.7;
+      text-align: justify; // Justify text
+      line-height: 1.7; // Set line height for better readability
     }
   }
   &__list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 3.2rem 0;
-    border-top: var(--line);
-    border-bottom: var(--line);
+    list-style: none; // Remove default list styling
+    display: flex; // Use flexbox
+    flex-wrap: wrap; // Allow wrapping of list items
+    padding: 3.2rem 0; // Add vertical padding
+    border-top: var(--line); // Add top border
+    border-bottom: var(--line); // Add bottom border
   }
 
   &__item {
-    flex: 0 0 50%;
-    position: relative;
-    margin-bottom: 0.8rem;
+    flex: 0 0 50%; // Set flex basis and prevent shrinking
+    position: relative; // Position relative for pseudo-element
+    margin-bottom: 0.8rem; // Add bottom margin
 
     &::before {
-      content: "";
-      margin-right: 0.8rem;
-      height: 1rem;
-      width: 1rem;
-      display: inline-block;
-      mask-image: url(../../img/chevron-thin-right.svg);
-      background-color: var(--color-primary);
-      mask-size: cover;
+      content: ""; // Empty content for the pseudo-element
+      margin-right: 0.8rem; // Add right margin
+      height: 1rem; // Set height
+      width: 1rem; // Set width
+      display: inline-block; // Display as an inline block
+      mask-image: url(../../img/chevron-thin-right.svg); // Use SVG mask
+      background-color: var(--color-primary); // Set background color
+      mask-size: cover; // Cover the entire element
     }
   }
 
   &__recommendations {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.6rem;
+    display: flex; // Use flexbox
+    justify-content: space-between; // Distribute space between children
+    align-items: center; // Align items vertically in the center
+    gap: 1.6rem; // Add gap between elements
     &-text {
-      font-size: 1.2rem;
-      text-align: justify;
+      font-size: 1.2rem; // Set font size
+      text-align: justify; // Justify text
     }
 
     &-avatars {
-      display: flex;
-      flex-wrap: nowrap;
+      display: flex; // Use flexbox
+      flex-wrap: nowrap; // Prevent wrapping of avatars
     }
     &-photo {
-      @include avatar-styling;
-      border: 3px solid #fff;
+      @include avatar-styling; // Apply avatar styling mixin
+      border: 3px solid #fff; // Add white border
       &:not(:last-child) {
-        margin-right: -2rem;
+        margin-right: -2rem; // Overlap avatars
       }
     }
   }
@@ -204,72 +205,72 @@ Hotel details section stylings
 
 // Reviews styling
 .reviews {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-details);
+  display: flex; // Use flexbox
+  flex-direction: column; // Stack children vertically
+  gap: var(--gap-details); // Add gap between reviews
   // align-items: center;
 }
 
 .review {
-  position: relative;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-  padding: var(--default-comp-pad);
+  position: relative; // Position relative for pseudo-elements
+  background-color: #fff; // White background color
+  display: flex; // Use flexbox
+  flex-direction: column; // Stack children vertically
+  gap: 2.4rem; // Add gap between elements
+  padding: var(--default-comp-pad); // Add padding
   &::before {
-    content: "\201C";
-    font-size: 20rem;
-    font-family: sans-serif;
-    color: var(--color-grey-light-2);
-    position: absolute;
-    top: -7.7rem;
-    left: -0.5rem;
+    content: "\201C"; // Add a quotation mark
+    font-size: 20rem; // Set font size for the quotation mark
+    font-family: sans-serif; // Set font family for the quotation mark
+    color: var(--color-grey-light-2); // Set color for the quotation mark
+    position: absolute; // Position absolute for the quotation mark
+    top: -7.7rem; // Position from the top
+    left: -0.5rem; // Position from the left
   }
 
   &__header {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    position: relative;
+    display: flex; // Use flexbox
+    flex-direction: column; // Stack children vertically
+    gap: 1.2rem; // Add gap between header elements
+    position: relative; // Position relative
   }
 
   &__text {
-    position: relative;
+    position: relative; // Position relative
   }
 
   &__footer {
-    display: flex;
-    justify-content: space-between;
+    display: flex; // Use flexbox
+    justify-content: space-between; // Space elements evenly in the footer
   }
 
   &__left-side {
-    display: flex;
-    gap: 1.2rem;
-    align-items: center;
+    display: flex; // Use flexbox
+    gap: 1.2rem; // Add gap between elements
+    align-items: center; // Align items vertically in the center
   }
 
   &__photo {
-    @include avatar-styling;
+    @include avatar-styling; // Apply avatar styling mixin
   }
 
   &__name {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1.2rem;
+    text-transform: uppercase; // Uppercase text
+    font-weight: 600; // Set font weight
+    font-size: 1.2rem; // Set font size for the name
   }
 
   &__date {
-    font-size: 1rem;
-    color: var(--color-grey-dark-1);
+    font-size: 1rem; // Set font size for the date
+    color: var(--color-grey-dark-1); // Set text color for the date
   }
 
   &__rating {
-    font-size: 2.4rem;
-    font-weight: 300;
-    color: var(--color-primary);
-    display: flex;
-    align-items: center;
+    font-size: 2.4rem; // Set font size for the rating
+    font-weight: 300; // Set font weight
+    color: var(--color-primary); // Set text color for the rating
+    display: flex; // Use flexbox
+    align-items: center; // Align rating vertically in the center
   }
 }
 
@@ -279,76 +280,75 @@ CTA styling
 *********************************************** 
 */
 .cta {
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3.2rem;
+  padding: 4rem; // Add padding to the CTA section
+  display: flex; // Use flexbox
+  flex-direction: column; // Stack children vertically
+  align-items: center; // Center-align children
+  gap: 3.2rem; // Add gap between elements
 
   &__heading {
-    text-align: center;
+    text-align: center; // Center-align the heading text
   }
 
   .btn {
-    border: none;
-    font-size: 1.6rem;
-    font-weight: 300;
+    border: none; // Remove border
+    font-size: 1.6rem; // Set font size
+    font-weight: 300; // Set font weight
     background-image: linear-gradient(
       to right,
       var(--color-primary-light) 0%,
       var(--color-primary) 33%,
       var(--color-primary-dark) 67%
-    );
-    text-transform: uppercase;
-    color: #fff;
-    padding: 2.4rem 8rem;
-    border-radius: 100px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.2s;
+    ); // Set background gradient
+    text-transform: uppercase; // Uppercase text
+    color: #fff; // Set text color to white
+    padding: 2.4rem 8rem; // Add padding
+    border-radius: 100px; // Round the corners
+    position: relative; // Position relative for pseudo-elements
+    overflow: hidden; // Hide overflow
+    transition: all 0.2s; // Smooth transition for all properties
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      content: ""; // Empty content for the pseudo-element
+      position: absolute; // Position absolute
+      top: 0; // Position from the top
+      left: 0; // Position from the left
+      width: 100%; // Full width
+      height: 100%; // Full height
       background-image: linear-gradient(
         to right,
         var(--color-primary-dark) 0%,
         var(--color-primary) 33%,
         var(--color-primary-light) 67%
-      );
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      ); // Set background gradient
+      opacity: 0; // Initially invisible
+      transition: opacity 0.3s ease; // Smooth transition for opacity
     }
     &:hover::before {
-      opacity: 1;
+      opacity: 1; // Show gradient overlay on hover
     }
 
     &-visible {
-      display: inline-block;
-      transition: all 0.2s;
+      display: inline-block; // Display as inline-block
+      transition: all 0.2s; // Smooth transition for all properties
     }
     &-invisible {
-      // color: red;
-      position: absolute;
-      top: -100%;
-      display: inline-block;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      transition: all 0.2s;
+      position: absolute; // Position absolute
+      top: -100%; // Position off-screen initially
+      display: inline-block; // Display as inline-block
+      left: 50%; // Center horizontally
+      transform: translateX(-50%); // Center the element
+      width: 100%; // Full width
+      transition: all 0.2s; // Smooth transition for all properties
     }
 
     &:hover .btn-visible {
-      transform: translateY(220%);
+      transform: translateY(220%); // Move visible text out of view on hover
     }
 
     &:hover .btn-invisible {
-      top: 50%;
-      transform: translate(-50%, -50%);
+      top: 50%; // Move to the middle vertically on hover
+      transform: translate(-50%, -50%); // Center the element
     }
   }
 }
