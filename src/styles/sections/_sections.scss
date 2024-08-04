@@ -173,9 +173,16 @@ Hotel details section stylings
       height: 1rem; // Set height
       width: 1rem; // Set width
       display: inline-block; // Display as an inline block
-      mask-image: url(../../img/chevron-thin-right.svg); // Use SVG mask
-      background-color: var(--color-primary); // Set background color
-      mask-size: cover; // Cover the entire element
+
+      background-image: url(../../img/chevron-thin-right.svg);
+      background-size: cover;
+
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+        mask-image: url(../../img/chevron-thin-right.svg); // Use SVG mask
+        background-color: var(--color-primary); // Set background color
+        mask-size: cover; // Cover the entire element
+        background-image: none;
+      }
     }
   }
 

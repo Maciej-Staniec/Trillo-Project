@@ -338,11 +338,18 @@ Hotel details section stylings
   height: 1rem;
   width: 1rem;
   display: inline-block;
-  -webkit-mask-image: url(../../img/chevron-thin-right.svg);
-          mask-image: url(../../img/chevron-thin-right.svg);
-  background-color: var(--color-primary);
-  -webkit-mask-size: cover;
-          mask-size: cover;
+  background-image: url(../../img/chevron-thin-right.svg);
+  background-size: cover;
+}
+@supports ((-webkit-mask-image: url()) or (mask-image: url())) {
+  .feature__item::before {
+    -webkit-mask-image: url(../../img/chevron-thin-right.svg);
+            mask-image: url(../../img/chevron-thin-right.svg);
+    background-color: var(--color-primary);
+    -webkit-mask-size: cover;
+            mask-size: cover;
+    background-image: none;
+  }
 }
 .feature__recommendations {
   display: flex;

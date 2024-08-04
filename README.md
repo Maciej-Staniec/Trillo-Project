@@ -28,8 +28,9 @@ Natour is a learning project that covers:
 - **Flexbox Layouts:** Creating layouts with Flexbox and mastering modern CSS layout techniques.
 - **Responsive Design:** Ensuring the site looks great on all devices, from desktops to mobile phones.
 - **Performance Optimization:** Implementing techniques to improve the loading speed and performance of the website.
+- **Feature Queries:** Using CSS feature queries to apply styles based on browser support for specific CSS features.
 - **Cross-Browser Compatibility:** Ensuring the site works smoothly across different web browsers.
-- **Build Process:** Creating a simple build process to optimize source files using tools like Gulp.
+- **Build Process:** Creating a simple build process to optimize source files using Gulp.
 
 The project includes graphics provided by Jonas Schmedtmann for portfolio purposes.
 
